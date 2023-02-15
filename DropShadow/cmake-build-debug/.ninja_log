@@ -1,0 +1,9 @@
+# ninja log v5
+1	289	1676406195967143162	CMakeFiles/DropShadow.dir/Font.cpp.o	dc28b8178e8f5d42
+3	285	1676406348918333272	CMakeFiles/DropShadow.dir/main.cpp.o	bdc574f0de857c64
+3	281	1676406496541040742	CMakeFiles/DropShadow.dir/dropShadow.cpp.o	f0685d2a2df689d8
+281	311	1676406496572736703	DropShadow	881dbb01f022e860
+3	327	1676489668728008717	CMakeFiles/DropShadow.dir/Font.cpp.o	6b718d29c92dbc70
+2	335	1676489668735111849	CMakeFiles/DropShadow.dir/main.cpp.o	a94cf37b5103d61f
+3	335	1676489668735332765	CMakeFiles/DropShadow.dir/dropShadow.cpp.o	fa99eec7b705a34e
+335	363	1676489668765890286	DropShadow	881dbb01f022e860
