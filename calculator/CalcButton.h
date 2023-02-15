@@ -25,9 +25,8 @@ public:
     const std::string& getText() const;
     void setPosition(sf::Vector2f position);
     void setSize(float size);
-    sf::FloatRect getGlobalBounds();
+    sf::FloatRect getGlobalBounds() const;
     void init(const std::string& text, const sf::Color &textColor, const sf::Color &backgroundColor);
-
 };
 
 

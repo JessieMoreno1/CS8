@@ -9,10 +9,13 @@ void Calculator::run() {
 
         /* ----- Calculator Functions */
         CalcButton equal;
-        equal.setPosition({300,650});
+
 
         CalcButton plus("+", sf::Color::White, {255,149,0});
-        Helper::top(equal, plus);
+        plus.setPosition({300,650});
+
+        Helper::center(equal, plus);
+        Helper::top(plus, equal, 10);
         //plus.setPosition({300,575});
 
         CalcButton minus("-", sf::Color::White, {255,149,0});

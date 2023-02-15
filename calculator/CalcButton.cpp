@@ -59,6 +59,6 @@ void CalcButton::init(const std::string& text, const sf::Color &textColor, const
     Helper::centerText(circle,this -> text);
 }
 
-sf::FloatRect CalcButton::getGlobalBounds() {
-    circle.getGlobalBounds();
+sf::FloatRect CalcButton::getGlobalBounds() const  {
+    return circle.getGlobalBounds();
 };
