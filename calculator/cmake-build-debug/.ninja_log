@@ -1,0 +1,9 @@
+# ninja log v5
+3	241	1676403637141819331	CMakeFiles/calculator.dir/Font.cpp.o	8c896f49f882810b
+4	456	1676486885594510087	CMakeFiles/calculator.dir/Helper.cpp.o	a96de433c7c32bb6
+4	463	1676486885601017219	CMakeFiles/calculator.dir/Application.cpp.o	b42f476bdf9e21d6
+489	532	1676486885674128732	calculator	97bbff1c1bc9d888
+4	484	1676486885624329173	CMakeFiles/calculator.dir/CalcButton.cpp.o	bc1923887e0b5c72
+2	481	1676486885620371786	CMakeFiles/calculator.dir/main.cpp.o	21ee68a1c495d5c6
+3	489	1676486885629375540	CMakeFiles/calculator.dir/Calculator.cpp.o	4e872d06d2838d01
+0	58	1676403625112854370	CMakeFiles/calculator.dir/CalcScreen.cpp.o	b0b10adbeafc3419
