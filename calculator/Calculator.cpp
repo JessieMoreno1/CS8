@@ -59,55 +59,21 @@ void Calculator::run() {
         Helper::right(buttons.at(13), buttons.at(18), 30);
 
         // position multiplication
+        Helper::center(buttons.at(12), buttons.at(13));
+        Helper::bottom(buttons.at(12), buttons.at(13), 15);
 
         //  position subtraction
+        Helper::center(buttons.at(11), buttons.at(12));
+        Helper::bottom(buttons.at(11), buttons.at(12), 15);
+
         // position addition
-        //Helper::center(buttons.at(10), buttons.at(14));
-        //Helper::top(buttons.at(10), buttons.at(14), 15);
+        Helper::center(buttons.at(10), buttons.at(11));
+        Helper::bottom(buttons.at(10), buttons.at(11), 15);
 
-    // position equal sign // the first parameter is the one you want to get close to, the second is the target that will be moved
+        // position equal sign // the first parameter is the one you want to get close to, the second is the target that will be moved
+        Helper::center(buttons.at(14), buttons.at(11));
+        Helper::bottom(buttons.at(14), buttons.at(11), 15);
 
-
-
-
-
-    // /* ----- Calculator Functions */
-       // CalcButton equal;
-       //
-       //
-       // CalcButton plus("+", sf::Color::White, {255,149,0});
-       // plus.setPosition({300,650});
-       //
-       // Helper::center(equal, plus);
-       // Helper::top(plus, equal, 10);
-       // //plus.setPosition({300,575});
-       //
-       // CalcButton minus("-", sf::Color::White, {255,149,0});
-       // minus.setPosition({300,500});
-       //
-       // CalcButton multiplication("x", sf::Color::White, {255,149,0});
-       // multiplication.setPosition({300,425});
-       //
-       // CalcButton division("/", sf::Color::White, {255,149,0});
-       // division.setPosition({300,350});
-       //
-       // CalcButton decimal(".", sf::Color::White, {80,80,80});
-       // decimal.setPosition({225,650});
-       //
-       // CalcButton clear("c", sf::Color::Black, {212,212,210});
-       // clear.setPosition({25,350});
-       //
-       // CalcButton openParenthesis("(", sf::Color::Black, {212,212,210});
-       // openParenthesis.setPosition({100,350});
-       //
-       // CalcButton closeParenthesis(")", sf::Color::Black, {212,212,210});
-       // closeParenthesis.setPosition({225,350});
-       //
-       // /* ----- Calculator Functions */
-       //
-       // /* ----- Calculator Numbers */
-       // CalcButton nine("9", sf::Color::White, {80,80,80});
-       // nine.setPosition({225,425});
 
         while (window.isOpen())
         {
@@ -122,22 +88,12 @@ void Calculator::run() {
             }
             window.clear();
 
-            //window.draw(closeParenthesis);
-            //window.draw(openParenthesis);
-            //window.draw(clear);
-            //window.draw(decimal);
-            //window.draw(division);
-            //window.draw(multiplication);
-            //window.draw(minus);
-            //window.draw(plus);
-            //window.draw(equal);
-
-           // window.draw(nine);
             for (int i = 0; i < buttons.size(); ++i) {
                 window.draw(buttons[i]);
             }
             window.display();
         }
 }
+
 
 

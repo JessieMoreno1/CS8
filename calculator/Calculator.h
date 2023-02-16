@@ -13,6 +13,7 @@
 
 class Calculator {
 public:
+    void init();
     void run();
 
 };
