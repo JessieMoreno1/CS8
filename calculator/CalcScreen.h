@@ -18,6 +18,7 @@ public:
     CalcScreen();
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void addToScreen(std::string number);
+    void clear();
 };
 
 

@@ -26,3 +26,8 @@ void CalcScreen::addToScreen(std::string number) {
     exp.append(number);
     expression.setString(exp);
 }
+
+void CalcScreen::clear() {
+    exp.clear();
+    expression.setString(exp);
+}

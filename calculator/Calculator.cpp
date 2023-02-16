@@ -73,8 +73,8 @@ void Calculator::run() {
         Helper::bottom(buttons.at(10), buttons.at(11), 15);
 
         // position equal sign // the first parameter is the one you want to get close to, the second is the target that will be moved
-        Helper::center(buttons.at(14), buttons.at(11));
-        Helper::bottom(buttons.at(14), buttons.at(11), 15);
+        Helper::center(buttons.at(14), buttons.at(10));
+        Helper::bottom(buttons.at(14), buttons.at(10), 15);
 
 
         while (window.isOpen())
@@ -104,6 +104,45 @@ void Calculator::run() {
                         screen.addToScreen(std::to_string(i));
                     }
                 }
+
+                if (MouseEvents::isClick(buttons.at(10), window)) // addition
+                {
+                    screen.addToScreen("+");
+                }
+                if (MouseEvents::isClick(buttons.at(11), window)) // minus button
+                {
+                    screen.addToScreen("-");
+                }
+                if (MouseEvents::isClick(buttons.at(12), window)) // multiplication
+                {
+                    screen.addToScreen("*");
+                }
+                if (MouseEvents::isClick(buttons.at(13), window)) // division
+                {
+                    screen.addToScreen("/");
+                }
+                if (MouseEvents::isClick(buttons.at(14), window)) // multiplication
+                {
+                    screen.addToScreen("=");
+                }
+                if (MouseEvents::isClick(buttons.at(15), window)) // decimal
+                {
+                    screen.addToScreen(".");
+                }
+                if (MouseEvents::isClick(buttons.at(16), window)) // all clear
+                {
+                    std::cout << "All clear" << std::endl;
+                    screen.clear();
+                }
+                if (MouseEvents::isClick(buttons.at(17), window)) // left parenthesis
+                {
+                    screen.addToScreen("(");
+                }
+                if (MouseEvents::isClick(buttons.at(18), window)) // right parenthesis
+                {
+                    screen.addToScreen(")");
+                }
+
 
 
             }
