@@ -8,6 +8,8 @@
 #include <SFML/Graphics.hpp>
 #include "CalcButton.h"
 #include "CalcScreen.h"
+#include <iostream>
+
 
 class Calculator {
 public:

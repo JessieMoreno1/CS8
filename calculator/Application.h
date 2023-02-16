@@ -7,10 +7,10 @@
 
 #include <SFML/Graphics.hpp>
 #include "CalcButton.h"
+#include <vector>
 
 class Application {
-public:
-    // void run();
+
 };
 
 

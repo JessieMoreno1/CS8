@@ -7,5 +7,6 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
     Calculator calc;
     calc.run();
+
     return 0;
 }

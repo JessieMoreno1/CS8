@@ -7,7 +7,7 @@
 sf::Font Font::font;
 
 void Font::loadFont() {
-    font.loadFromFile("Fonts/digital-7 (mono).ttf");
+    font.loadFromFile("Fonts/Walkway SemiBold.ttf");
 
 }
 

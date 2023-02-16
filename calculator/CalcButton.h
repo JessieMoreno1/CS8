@@ -27,6 +27,8 @@ public:
     void setSize(float size);
     sf::FloatRect getGlobalBounds() const;
     void init(const std::string& text, const sf::Color &textColor, const sf::Color &backgroundColor);
+
+    static std::vector<CalcButton> createButtons();
 };
 
 

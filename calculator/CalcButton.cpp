@@ -8,7 +8,7 @@ CalcButton::CalcButton() : CalcButton("=", sf::Color::White, {255,149,0}) {
 
 }
 
-CalcButton::CalcButton(const std::string &text) : CalcButton(text, sf::Color::White, {212,149,0}) {
+CalcButton::CalcButton(const std::string &text) : CalcButton(text, sf::Color::White, {80,80,80}) {
 
 }
 
@@ -19,6 +19,7 @@ CalcButton::CalcButton(const std::string &text, const sf::Color &color, const sf
 void CalcButton::draw(sf::RenderTarget &window, sf::RenderStates states) const {
     window.draw(circle);
     window.draw(text);
+
 }
 
 void CalcButton::setBackgroundColor(const sf::Color &color) {
@@ -51,7 +52,7 @@ void CalcButton::init(const std::string& text, const sf::Color &textColor, const
     this -> text.setFont(Font::getFont());
     this -> text.setString(text);
     this -> text.setFillColor(textColor);
-    this -> text.setCharacterSize(70);
+    this -> text.setCharacterSize(50);
 
     circle.setFillColor(backgroundColor);
     circle.setRadius(30);
@@ -61,4 +62,30 @@ void CalcButton::init(const std::string& text, const sf::Color &textColor, const
 
 sf::FloatRect CalcButton::getGlobalBounds() const  {
     return circle.getGlobalBounds();
+}
+
+// vector of CalcButton to hold all the buttons
+std::vector<CalcButton> CalcButton::createButtons() {
+    std::vector<CalcButton> buttons;
+
+    //int maxButtons = 19;
+
+    for (int i = 0; i < 10; ++i) {
+        buttons.push_back(CalcButton(std::to_string(i)));
+    }
+
+    // operation buttons
+    buttons.push_back(CalcButton("+", sf::Color::White, {255,149,0}));
+    buttons.push_back(CalcButton("-", sf::Color::White, {255,149,0}));
+    buttons.push_back(CalcButton("*", sf::Color::White, {255,149,0}));
+    buttons.push_back(CalcButton("/", sf::Color::White, {255,149,0}));
+    buttons.push_back(CalcButton("=", sf::Color::White, {255,149,0}));
+
+    // other operations
+    buttons.push_back(CalcButton("."));
+    buttons.push_back(CalcButton("C", sf::Color::White, {255,149,0}));
+    buttons.push_back(CalcButton("(", sf::Color::White, {255,149,0}));
+    buttons.push_back(CalcButton(")", sf::Color::White, {255,149,0}));
+
+    return buttons;
 };
