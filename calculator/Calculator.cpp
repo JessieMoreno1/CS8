@@ -4,12 +4,14 @@
 
 #include "Calculator.h"
 
-
 void Calculator::run() {
         sf::RenderWindow window ({400,800,30}, "Calculator");
 
         // Create the buttons
         std::vector<CalcButton> buttons = CalcButton::createButtons();
+
+        // create the screen that will display the equation
+        CalcScreen screen;
 
         // Use the buttons
         for (int i = 0; i < buttons.size(); i++) {
@@ -85,8 +87,30 @@ void Calculator::run() {
                     window.close();
                 }
 
+                for (int i = 0; i <= 18; i++) {
+                    if (MouseEvents::isHover(buttons.at(i), window))
+                    {
+                        buttons.at(i).setTextColor(sf::Color::Magenta);
+                    }
+                    else
+                    {
+                        buttons.at(i).setTextColor(sf::Color::White);
+                    }
+                }
+
+                for (int i = 0; i < 10; i++) {
+                    if (MouseEvents::isClick(buttons.at(i), window)) {
+                        std::cout << " Clicked on button : " << i << std::endl;
+                        screen.addToScreen(std::to_string(i));
+                    }
+                }
+
+
             }
-            window.clear();
+            sf::Color transparentBlue = {48,47,77};
+            transparentBlue.a = 75;
+            window.clear(transparentBlue);
+            window.draw(screen);
 
             for (int i = 0; i < buttons.size(); ++i) {
                 window.draw(buttons[i]);

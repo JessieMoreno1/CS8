@@ -9,11 +9,11 @@
 #include "CalcButton.h"
 #include "CalcScreen.h"
 #include <iostream>
+#include "MouseEvents.h"
 
 
 class Calculator {
 public:
-    void init();
     void run();
 
 };
