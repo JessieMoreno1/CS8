@@ -10,7 +10,7 @@
 #include "CalcScreen.h"
 #include <iostream>
 #include "MouseEvents.h"
-
+#include "RPN.h"
 
 class Calculator {
 public:

@@ -13,6 +13,9 @@ void Calculator::run() {
         // create the screen that will display the equation
         CalcScreen screen;
 
+        // create the RPN instance that will calculate the expression
+        RPN rpn;
+
         // Use the buttons
         for (int i = 0; i < buttons.size(); i++) {
             CalcButton button = buttons[i];
@@ -123,7 +126,10 @@ void Calculator::run() {
                 }
                 if (MouseEvents::isClick(buttons.at(14), window)) // multiplication
                 {
-                    screen.addToScreen("=");
+                    //screen.addToScreen("=");
+                    screen.clear();
+                    //rpn.calculate(screen.getExpression());
+                    screen.expressionToRPN();
                 }
                 if (MouseEvents::isClick(buttons.at(15), window)) // decimal
                 {
@@ -131,7 +137,7 @@ void Calculator::run() {
                 }
                 if (MouseEvents::isClick(buttons.at(16), window)) // all clear
                 {
-                    std::cout << "All clear" << std::endl;
+                    screen.resetTextPos();
                     screen.clear();
                 }
                 if (MouseEvents::isClick(buttons.at(17), window)) // left parenthesis
