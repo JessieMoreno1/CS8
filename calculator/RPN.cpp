@@ -4,7 +4,7 @@
 
 #include "RPN.h"
 
-const std::string RPN::ops = "+-x/=^()";
+const std::string RPN::ops = "+-*/=^()";
 
 int RPN::getPrecendence(char oper) {
     switch(oper)
