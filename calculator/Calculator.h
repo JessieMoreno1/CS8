@@ -11,6 +11,7 @@
 #include <iostream>
 #include "MouseEvents.h"
 #include "RPN.h"
+#include <iomanip>
 
 class Calculator {
 public:

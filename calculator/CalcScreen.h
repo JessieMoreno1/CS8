@@ -9,6 +9,8 @@
 #include <SFML/Graphics.hpp>
 #include "Font.h"
 #include "RPN.h"
+#include <iomanip>
+
 class CalcScreen : public sf::Drawable {
 private:
     sf::RectangleShape screen;
@@ -19,9 +21,9 @@ public:
     virtual void draw(sf::RenderTarget& window, sf::RenderStates states) const;
     void addToScreen(std::string number);
     void clear();
+    void clearScreen();
     std::string getExpression();
     void resetTextPos();
-    std::string expressionToRPN();
 };
 
 

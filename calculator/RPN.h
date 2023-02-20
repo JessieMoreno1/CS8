@@ -9,15 +9,20 @@
 #include <queue>
 #include <iostream>
 #include "CalcScreen.h"
+#include <cmath>
 
 
 class RPN {
 private:
-    std::stack<std::string> operations;
-    std::queue<std::string> integers;
+    static const std::string ops;
+    static std::queue<std::string> postFix(const std::string &expression);
+
+    static int getPrecendence(char oper);
+    static bool isOperator(const char oper);
+    static float solve(float a, float b, char operation);
+
 public:
-    RPN();
-    std::string calculate(std::string expression);
+    static float calculate(const std::string& expression);
 
 
 };

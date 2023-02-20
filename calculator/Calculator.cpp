@@ -124,12 +124,13 @@ void Calculator::run() {
                 {
                     screen.addToScreen("/");
                 }
-                if (MouseEvents::isClick(buttons.at(14), window)) // multiplication
+                if (MouseEvents::isClick(buttons.at(14), window)) // equal sign
                 {
-                    //screen.addToScreen("=");
+                    screen.clearScreen();
+                    float answer = RPN::calculate(screen.getExpression());
                     screen.clear();
-                    //rpn.calculate(screen.getExpression());
-                    screen.expressionToRPN();
+                    screen.addToScreen(std::to_string(answer));
+
                 }
                 if (MouseEvents::isClick(buttons.at(15), window)) // decimal
                 {

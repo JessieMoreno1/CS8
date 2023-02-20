@@ -24,19 +24,22 @@ void CalcScreen::draw(sf::RenderTarget &window, sf::RenderStates states) const {
 
 void CalcScreen::addToScreen(std::string number) {
     exp.append(number);
+    //std::setprecision(2);
     expression.setString(exp);
 
     if (exp.size() > 1)
     {
         expression.move(-30,0);
     }
+
 }
 
 void CalcScreen::clear() {
-    //exp.clear();
-    //expression.setString(exp);
+    exp.clear();
+    expression.setString(exp);
     expression.setString("");
 }
+
 
 std::string CalcScreen::getExpression() {
     return exp;
@@ -46,12 +49,8 @@ void CalcScreen::resetTextPos() {
     expression.setPosition(300,100);
 }
 
-std::string CalcScreen::expressionToRPN() {
-    RPN rpn;
-
-    std::string sya =  rpn.calculate(exp);
-    expression.setString(sya);
-    return sya;
+void CalcScreen::clearScreen() {
+    expression.setString("");
 }
 
 
