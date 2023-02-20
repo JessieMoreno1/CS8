@@ -28,6 +28,7 @@ public:
 
     template<class T, class S>
     static void center(T& self,const S& ref);
+
 };
 
 #include "Helper.cpp"

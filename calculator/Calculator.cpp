@@ -127,9 +127,12 @@ void Calculator::run() {
                 if (MouseEvents::isClick(buttons.at(14), window)) // equal sign
                 {
                     screen.clearScreen();
+
                     float answer = RPN::calculate(screen.getExpression());
                     screen.clear();
-                    screen.addToScreen(std::to_string(answer));
+                    //screen.addToScreen(std::to_string(answer));
+                    screen.resetTextPos();
+                    screen.addToScreen(Helper2::removeTrailingZeros(std::to_string(answer)));
 
                 }
                 if (MouseEvents::isClick(buttons.at(15), window)) // decimal

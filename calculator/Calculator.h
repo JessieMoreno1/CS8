@@ -12,6 +12,7 @@
 #include "MouseEvents.h"
 #include "RPN.h"
 #include <iomanip>
+#include "Helper2.h"
 
 class Calculator {
 public:

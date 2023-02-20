@@ -109,6 +109,13 @@ build CMakeFiles/calculator.dir/RPN.cpp.o: CXX_COMPILER__calculator_Debug /Users
   OBJECT_DIR = CMakeFiles/calculator.dir
   OBJECT_FILE_DIR = CMakeFiles/calculator.dir
 
+build CMakeFiles/calculator.dir/Helper2.cpp.o: CXX_COMPILER__calculator_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/calculator/Helper2.cpp || cmake_object_order_depends_target_calculator
+  DEP_FILE = CMakeFiles/calculator.dir/Helper2.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/calculator.dir
+  OBJECT_FILE_DIR = CMakeFiles/calculator.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target calculator
@@ -117,7 +124,7 @@ build CMakeFiles/calculator.dir/RPN.cpp.o: CXX_COMPILER__calculator_Debug /Users
 #############################################
 # Link the executable calculator
 
-build calculator: CXX_EXECUTABLE_LINKER__calculator_Debug CMakeFiles/calculator.dir/main.cpp.o CMakeFiles/calculator.dir/Calculator.cpp.o CMakeFiles/calculator.dir/CalcScreen.cpp.o CMakeFiles/calculator.dir/CalcButton.cpp.o CMakeFiles/calculator.dir/Font.cpp.o CMakeFiles/calculator.dir/Helper.cpp.o CMakeFiles/calculator.dir/Application.cpp.o CMakeFiles/calculator.dir/MouseEvents.cpp.o CMakeFiles/calculator.dir/RPN.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build calculator: CXX_EXECUTABLE_LINKER__calculator_Debug CMakeFiles/calculator.dir/main.cpp.o CMakeFiles/calculator.dir/Calculator.cpp.o CMakeFiles/calculator.dir/CalcScreen.cpp.o CMakeFiles/calculator.dir/CalcButton.cpp.o CMakeFiles/calculator.dir/Font.cpp.o CMakeFiles/calculator.dir/Helper.cpp.o CMakeFiles/calculator.dir/Application.cpp.o CMakeFiles/calculator.dir/MouseEvents.cpp.o CMakeFiles/calculator.dir/RPN.cpp.o CMakeFiles/calculator.dir/Helper2.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/calculator.dir
