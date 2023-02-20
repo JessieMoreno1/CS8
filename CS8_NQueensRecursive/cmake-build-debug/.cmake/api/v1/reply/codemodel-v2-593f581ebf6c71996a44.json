@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CS8_NQueensRecursive",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CS8_NQueensRecursive::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CS8_NQueensRecursive-Debug-6656dde377b28eb685f2.json",
+					"name" : "CS8_NQueensRecursive",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/CS8_NQueensRecursive/cmake-build-debug",
+		"source" : "/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/CS8_NQueensRecursive"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

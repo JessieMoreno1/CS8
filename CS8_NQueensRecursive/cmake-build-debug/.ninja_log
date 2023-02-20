@@ -1,0 +1,7 @@
+# ninja log v5
+2	211	1676576218290169082	CMakeFiles/CS8_NQueensRecursive.dir/main.cpp.o	5f7f59240245a85b
+1	211	1676576505390488157	CMakeFiles/CS8_NQueensRecursive.dir/QueensRecursive.cpp.o	71a73b3a855a17c0
+211	241	1676576505422047522	CS8_NQueensRecursive	26f2af543cc9a779
+2	403	1676874718830910469	CMakeFiles/CS8_NQueensRecursive.dir/main.cpp.o	4e6da258705d82e0
+2	414	1676874718843339636	CMakeFiles/CS8_NQueensRecursive.dir/QueensRecursive.cpp.o	fe8d01fd3fcb0210
+414	462	1676874718893164762	CS8_NQueensRecursive	26f2af543cc9a779
