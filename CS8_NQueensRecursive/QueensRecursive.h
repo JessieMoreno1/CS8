@@ -7,12 +7,15 @@
 
 #include <iostream>
 
+
 class QueensRecursive {
 private:
     int board[0][0];
+    int size;
 public:
     QueensRecursive();
     QueensRecursive(int n);
+    std::array<int> callBoard();
     bool place(int row, int col);
 };
 
