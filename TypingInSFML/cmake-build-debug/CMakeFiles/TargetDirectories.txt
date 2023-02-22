@@ -1,0 +1,3 @@
+/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/TypingInSFML/cmake-build-debug/CMakeFiles/TypingInSFML.dir
+/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/TypingInSFML/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/TypingInSFML/cmake-build-debug/CMakeFiles/rebuild_cache.dir
