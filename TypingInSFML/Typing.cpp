@@ -16,6 +16,10 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event event) {
 
     while (window.pollEvent(event))
     {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::J))
+        {
+            tempText.append("J");
+        }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && sf::Keyboard::isKeyPressed(sf::Keyboard::LShift))
         {
             tempText.pop_back();
