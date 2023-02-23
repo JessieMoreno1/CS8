@@ -1,9 +1,9 @@
 #include <iostream>
 #include "BinaryTree.h"
-
+#include "A.h"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    A a;
     BinaryTree<int> t;
-    t.preorder(A::f, a);
+    t.preorder(&A::f, a);
     return 0;
 }

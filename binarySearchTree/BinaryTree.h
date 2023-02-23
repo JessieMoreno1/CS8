@@ -11,15 +11,25 @@ template <typename T>
 class BinaryTree {
 private:
     Node<T>* root = nullptr;
-    bool isGreater(Node<T>* node, Node<T>* parent);
-    void preorder(Node<T>* node, void (*f)(T&));
+//    bool isGreater(Node<T>* node, Node<T>* parent);
 
+    // traversal
+    void preorder(Node<T>* node, void (*f)(T&));
     template <typename S>
-    void preorder(Node<T>* node, void (S::*f)(S&), S& obj);
+    void preorder(Node<T>* node, void (S::*f)(T&), S& obj);
+
+    void push(Node<T>* node, const T& data);
 
 public:
+    // big 3
+
     BinaryTree();
     BinaryTree(const T& data);
+    BinaryTree(const BinaryTree& tree);
+
+    ~BinaryTree();
+
+    BinaryTree& operator=(const BinaryTree& tree);
 
     //default output function
     void output(T& data);
@@ -30,7 +40,8 @@ public:
     template <typename S>
     void preorder(void (S::*f)(T&), S& obj);
 
-
+    // insert function
+    void push(const T& data );
 
 
 };
