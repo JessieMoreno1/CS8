@@ -8,7 +8,7 @@
 template<typename T>
 struct Node {
     T data;
-    Node<T> *left, *right = nullptr;
+    Node<T> *left = nullptr, *right = nullptr;
 };
 
 

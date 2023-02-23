@@ -6,6 +6,7 @@
 #define BINARYSEARCHTREE_BINARYTREE_CPP
 
 #include "BinaryTree.h"
+#include <iostream>
 
 template<typename T>
 BinaryTree<T>::BinaryTree() {
@@ -19,8 +20,22 @@ BinaryTree<T>::BinaryTree(const BinaryTree &tree) {
 
 template<typename T>
 BinaryTree<T>::~BinaryTree() {
+    deleteNode(root);
+}
+
+template<typename T>
+void BinaryTree<T>::deleteNode(Node<T> *node) {
+
+    if (node->left == nullptr && node->right == nullptr)
+        delete node;
+
+    else if (node->left)
+        deleteNode(node->left);
+    else if (node->right)
+        deleteNode(node->right);
 
 }
+
 
 //template<typename T>
 //bool BinaryTree<T>::isGreater(Node<T> *node, Node<T> *parent) {
@@ -35,18 +50,17 @@ void BinaryTree<T>::preorder(Node<T> *node, void (*f)(T &)) {
 template<typename T>
 template<typename S>
 void BinaryTree<T>::preorder(Node<T> *node, void (S::*f)(T&), S &obj) {
-    (obj.*f)(node -> data);
-    if (node->left != nullptr)
-        preorder(node->left, f,obj);
-    if (node->right != nullptr)
-        preorder(node->right, f,obj);
+    if (node ) {
+            (obj.*f)(node->data);
+            preorder(node->left, f, obj);
+            preorder(node->right, f, obj);
+
+    }
 }
-
-
 
 template<typename T>
 BinaryTree<T>::BinaryTree(const T &data) {
-
+    root = new Node<T>{data};
 }
 
 template<typename T>
@@ -66,21 +80,15 @@ void BinaryTree<T>::preorder(void (S::*f)(T &), S &obj) {
 }
 
 template<typename T> // private
-void BinaryTree<T>::push(Node<T> *node, const T& data) {
-    if (node == nullptr)
-        node->data = data;
-
-    else if(node->data < data) {
-        if (node->left != nullptr)
-            push(node->left, data);
-        else
-            node->right = new Node<T>(data);
+void BinaryTree<T>::push(Node<T> *&node, const T& data) {
+    if (node == nullptr) {
+        node = new Node<T>{data};
+    }
+    else if (node->data < data) {
+        push(node->right, data);
     }
     else {
-        if (node->right != nullptr)
-            push(node->right, data);
-        else
-            node->left = new Node<T>(data);
+        push(node->left, data);
     }
 }
 
@@ -91,8 +99,8 @@ BinaryTree<T>& BinaryTree<T>::operator=(const BinaryTree &tree) {
 
 template<typename T>
 void BinaryTree<T>::push(const T &data) {
-    push(root,data);
 
+    push(root,data);
 }
 
 #endif
