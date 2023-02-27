@@ -24,7 +24,10 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event& event) {
         tempText.pop_back();
     }
 
-    // random comment
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace) && !tempText.empty())
+    {
+        tempText.pop_back();
+    }
 
 }
 
