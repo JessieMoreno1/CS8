@@ -7,7 +7,7 @@ int main() {
 
     sf::RenderWindow window({720,420,32}, "");
 
-//    Typing typing;
+    Typing typing;
 
     while (window.isOpen())
     {
@@ -18,15 +18,13 @@ int main() {
             {
                 window.close();
             }
-            else if (event.type == sf::Event::KeyPressed)
-                std::cout << std::string (1,event.key.code + 'A' <= 'Z' && event.key.code + 'A' >= 'A' ?event.key.code + 'A' : ' ');
 
-//            typing.addEventHandler(window, event);
+            typing.addEventHandler(window, event);
         }
-//        typing.update();
+        typing.update();
 
         window.clear();
-//        window.draw(typing);
+        window.draw(typing);
         window.display();
     }
 }

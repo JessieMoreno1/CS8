@@ -12,19 +12,19 @@ Typing::Typing() {
     text.setPosition({200,100});
 }
 
-void Typing::addEventHandler(sf::RenderWindow &window, sf::Event event) {
+void Typing::addEventHandler(sf::RenderWindow &window, sf::Event& event) {
 
-    while (window.pollEvent(event))
-    {
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::J))
-        {
-            tempText.append("J");
-        }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && sf::Keyboard::isKeyPressed(sf::Keyboard::LShift))
-        {
-            tempText.pop_back();
-        }
+
+    if(event.type == sf::Event::KeyPressed) {
+        tempText.push_back( event.key.code + 'A' <= 'Z' && event.key.code + 'A' >= 'A' ? event.key.code + 'A' : ' ');
     }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+    {
+        tempText.pop_back();
+    }
+
+
 }
 
 void Typing::update() {
