@@ -24,6 +24,7 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event& event) {
         tempText.pop_back();
     }
 
+    // random comment
 
 }
 
