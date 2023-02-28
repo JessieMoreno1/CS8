@@ -15,10 +15,18 @@ Typing::Typing() {
 void Typing::addEventHandler(sf::RenderWindow &window, sf::Event& event) {
 
 
-    if(event.type == sf::Event::KeyPressed) {
-        tempText.push_back( event.key.code + 'A' <= 'Z' && event.key.code + 'A' >= 'A' ? event.key.code + 'A' : ' ');
-    }
+    // if(event.type == sf::Event::KeyPressed) {
+    //     tempText.push_back( event.key.code + 'A' <= 'Z' && event.key.code + 'A' >= 'A' ? event.key.code + 'A' : ' ');
+    // }
+    if (event.type == sf::Event::TextEntered)
+    {
+        if (event.text.unicode < 128)
+        {
+            std::cout << "ASCII character typed : " << static_cast<char>(event.text.unicode) << std::endl;
+            tempText.push_back(static_cast<char>(event.text.unicode));
 
+        }
+    }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
     {
         tempText.pop_back();
