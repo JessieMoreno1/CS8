@@ -7,13 +7,20 @@
 
 #include "Letter.h"
 #include <SFML/Graphics.hpp>
-#include <queue>
+#include <list>
+
 
 class MultiText : public sf::Drawable {
 private:
-    std::queue<Letter> string;
-public:
+    MultiText text;
+    std::list<Letter> string;
 
+public:
+    MultiText();
+    void addEventHandler(sf::RenderWindow& window, sf::Event& event);
+    void update();
+protected:
+    void draw(sf::RenderTarget &window, sf::RenderStates states) const override;
 
 };
 

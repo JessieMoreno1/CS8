@@ -8,7 +8,10 @@
 #include <SFML/Graphics.hpp>
 
 class Letter : public sf::Text {
+private:
 
+public:
+    Letter();
 };
 
 
