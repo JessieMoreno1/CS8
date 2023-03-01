@@ -13,10 +13,13 @@ private:
     Node<T>* root = nullptr;
 //    bool isGreater(Node<T>* node, Node<T>* parent);
     void deleteNode(Node<T>* node);
+
     // traversal
     void preorder(Node<T>* node, void (*f)(T&));
     template <typename S>
     void preorder(Node<T>* node, void (S::*f)(T&), S& obj);
+
+
 
     void push(Node<T>* &node, const T& data);
 
@@ -39,6 +42,7 @@ public:
 
     template <typename S>
     void preorder(void (S::*f)(T&), S& obj);
+
 
     // insert function
     void push(const T& data );

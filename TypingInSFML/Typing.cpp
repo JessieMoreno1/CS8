@@ -27,7 +27,7 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event& event) {
 
         }
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && sf::Keyboard::isKeyPressed(sf::Keyboard::Z) && !tempText.empty())
     {
         tempText.pop_back();
     }
