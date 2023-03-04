@@ -7,12 +7,14 @@
 
 #include "Letter.h"
 #include <SFML/Graphics.hpp>
+#include "Font.h"
 #include <list>
+#include <iostream>
 
 
 class MultiText : public sf::Drawable {
 private:
-    MultiText text;
+    Letter letter;
     std::list<Letter> string;
 
 public:

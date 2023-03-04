@@ -4,8 +4,10 @@
 
 #include "Font.h"
 
+sf::Font Font::font;
+
 void Font::loadFont() {
-    font.loadFromFile("Fonts/BebasNeue-Regular.otf");
+    font.loadFromFile("Fonts/Glossy Sheen Shine DEMO.ttf");
 }
 
 sf::Font &Font::getFont() {

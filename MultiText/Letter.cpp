@@ -5,8 +5,12 @@
 #include "Letter.h"
 #include "Font.h"
 
-Letter::Letter() {
-    setFont(Font::getFont());
-    setCharacterSize(100);
-    setPosition({200,100});
+Letter::Letter() : Letter(' '){
+
 }
+
+Letter::Letter(char character)
+{
+    setString(character);
+}
+

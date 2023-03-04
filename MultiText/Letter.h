@@ -12,6 +12,8 @@ private:
 
 public:
     Letter();
+    Letter(char character);
+
 };
 
 
