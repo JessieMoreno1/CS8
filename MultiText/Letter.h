@@ -14,6 +14,8 @@ public:
     Letter();
     Letter(char character);
 
+    friend bool operator == (const Letter& _char1, const Letter& _char2);
+    friend std::ostream& operator << (std::ostream& outs, const Letter& _char);
 };
 
 

@@ -12,15 +12,17 @@
 #include <iostream>
 
 
-class MultiText : public sf::Drawable {
+class MultiText : public sf::Drawable, sf::Transformable {
 private:
     Letter letter;
     std::list<Letter> string;
 
+    int count = 0;
+    sf::Vector2f startPos;
 public:
     MultiText();
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);
-    void update();
+    void setCharacterPosition();
 protected:
     void draw(sf::RenderTarget &window, sf::RenderStates states) const override;
 

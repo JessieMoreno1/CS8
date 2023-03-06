@@ -10,12 +10,12 @@
 
 template<typename T>
 BinaryTree<T>::BinaryTree() {
-
+    root = new Node<T>{0};
 }
 
 template<typename T>
 BinaryTree<T>::BinaryTree(const BinaryTree &tree) {
-
+    root = tree.root;
 }
 
 template<typename T>
@@ -36,15 +36,14 @@ void BinaryTree<T>::deleteNode(Node<T> *node) {
 
 }
 
-
-//template<typename T>
-//bool BinaryTree<T>::isGreater(Node<T> *node, Node<T> *parent) {
-//    return false;
-//}
-
 template<typename T>
 void BinaryTree<T>::preorder(Node<T> *node, void (*f)(T &)) {
+    if (node ) {
+        (*f)(node->data);
+        preorder(node->left, f);
+        preorder(node->right, f);
 
+    }
 }
 
 template<typename T>
@@ -71,6 +70,7 @@ void BinaryTree<T>::output(T &data) {
 template<typename T>
 void BinaryTree<T>::preorder(void (*f)(T &)) {
     preorder(root,f);
+
 }
 
 template<typename T>
@@ -101,6 +101,65 @@ template<typename T>
 void BinaryTree<T>::push(const T &data) {
 
     push(root,data);
+}
+
+template<typename T>
+void BinaryTree<T>::inorder(Node<T> *node, void (*f)(T &)) {
+    if (node)
+    {
+        inorder(node -> left, f);
+        (*f)(node-> data);
+        inorder(node->right, f);
+    }
+}
+
+template<typename T>
+template<typename S>
+void BinaryTree<T>::inorder(Node<T> *node, void (*f)(T &), S &obj) {
+    if (node)
+    {
+        inorder(node -> left, f, obj);
+        (obj.*f)(node-> data);
+        inorder(node->right, f, obj);
+    }
+}
+
+template<typename T>
+void BinaryTree<T>::postorder(Node<T> *node, void (*f)(T &)) {
+
+}
+
+template<typename T>
+template<typename S>
+void BinaryTree<T>::postorder(Node<T> *node, void (*f)(T &), S &obj) {
+    if (node)
+    {
+        postorder(node->left, f, obj);
+        postorder(node-> right, f, obj);
+        (obj.*f)(node -> data);
+    }
+}
+
+template<typename T>
+void BinaryTree<T>::inorder(Node<T> *node, void (*f)(T &)) {
+    inorder(root,f);
+}
+
+template<typename T>
+template<typename S>
+void BinaryTree<T>::inorder(Node<T> *node, void (*f)(T &), S &obj) {
+    inorder(root,f,obj);
+}
+
+template<typename T>
+void BinaryTree<T>::postorder(Node<T> *node, void (*f)(T &)) {
+    postorder(root,f);
+}
+
+template<typename T>
+template<typename S>
+void BinaryTree<T>::postorder(Node<T> *node, void (*f)(T &), S &obj) {
+    postorder(root,f,obj);
 }
 
 #endif
