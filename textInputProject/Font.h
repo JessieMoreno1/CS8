@@ -6,13 +6,16 @@
 #define TEXTINPUTPROJECT_FONT_H
 
 #include <SFML/Graphics.hpp>
+#include "fontsEnum.h"
+#include <map>
 
 class Font {
 private:
-    static sf::Font font;
-    static void loadFont();
+    static std::map<fontsEnum, sf::Font> map;
+    static void load(fontsEnum font);
+    static std::string getPath(fontsEnum font);
 public:
-    static sf::Font& getFont();
+    static sf::Font& getFont(fontsEnum font);
 };
 
 

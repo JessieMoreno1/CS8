@@ -4,14 +4,27 @@
 
 #include "Font.h"
 
-sf::Font Font::font;
+std::map<fontsEnum, sf::Font> Font::map;
 
-void Font::loadFont() {
-    font.loadFromFile("Fonts/Bebas-Regular.ttf");
+void Font::load(fontsEnum font) {
 
+    map[font].loadFromFile(getPath(font));
 }
 
-sf::Font &Font::getFont() {
-    loadFont();
-    return font;
+std::string Font::getPath(fontsEnum font) {
+    switch(font)
+    {
+        case BEBAS: return "Fonts/Bebas-Regular.ttf";
+        case SUNFLOWER: return "Fonts/MADE Sunflower PERSONAL USE.otf";
+            // add path if adding new fonts and add in fontEnum.h
+        case LAST_FONT: return "";
+
+    }
+
+    return std::string();
+}
+
+sf::Font &Font::getFont(fontsEnum font) {
+    load(font);
+    return map[font];
 }

@@ -34,35 +34,36 @@ Application::Application() {
         window.draw(passwordTextbox);
 
         window.draw(submitButton);
+        window.draw(rotation);
+
         window.display();
     }
 }
 
 void Application::init() {
 
-
     companyTitle.setFillColor(sf::Color::Black);
     companyTitle.setString("Jessie UI");
     companyTitle.setPosition({70,50});
     companyTitle.setCharacterSize(30);
-    companyTitle.setFont(Font::getFont());
+    companyTitle.setFont(Font::getFont(BEBAS));
 
     welcomeText.setFillColor(sf::Color::Black);
     welcomeText.setString("Welcome Back");
     welcomeText.setPosition({240,350});
-    welcomeText.setFont(Font::getFont());
+    welcomeText.setFont(Font::getFont(BEBAS));
     welcomeText.setCharacterSize(75);
 
     welcomeSubtext.setFillColor(sf::Color::Black);
     welcomeSubtext.setString("Welcome Back! Please enter your details.");
     welcomeSubtext.setPosition({250,440});
-    welcomeSubtext.setFont(Font::getFont());
+    welcomeSubtext.setFont(Font::getFont(BEBAS));
     welcomeSubtext.setCharacterSize(25);
 
     emailText.setFillColor(sf::Color::Black);
     emailText.setString("Email");
     emailText.setPosition({250,540});
-    emailText.setFont(Font::getFont());
+    emailText.setFont(Font::getFont(BEBAS));
     emailText.setCharacterSize(25);
 
     emailTextbox.setPosition(250,580);
@@ -70,11 +71,11 @@ void Application::init() {
     passwordText.setFillColor(sf::Color::Black);
     passwordText.setString("Password");
     passwordText.setPosition({250,650});
-    passwordText.setFont(Font::getFont());
+    passwordText.setFont(Font::getFont(BEBAS));
     passwordText.setCharacterSize(25);
 
     passwordTextbox.setPosition(250,690);
 
     submitButton.setPosition(250,800);
-
+    submitButton.setButtonText("Submit");
 }

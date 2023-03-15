@@ -6,13 +6,17 @@
 #define TEXTINPUTPROJECT_BUTTON_H
 
 #include "SFML/Graphics.hpp"
+#include "Helper.h"
+#include "Font.h"
 
 class Button : public sf::Drawable {
 private:
     sf::RectangleShape button;
+    sf::Text buttonText;
 public:
     Button();
     void setPosition(float x, float y);
+    void setButtonText(std::string text);
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };

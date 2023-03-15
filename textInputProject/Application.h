@@ -9,12 +9,14 @@
 #include "Textbox.h"
 #include "Font.h"
 #include "Button.h"
+#include "ImageRotation.h"
 
 class Application {
 private:
     Textbox emailTextbox, passwordTextbox;
     Button submitButton;
     sf::Text companyTitle, welcomeText, welcomeSubtext, emailText, passwordText;
+    ImageRotation rotation;
 
 public:
     Application();
