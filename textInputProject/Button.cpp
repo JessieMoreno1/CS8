@@ -5,8 +5,10 @@
 #include "Button.h"
 
 Button::Button() {
-    button.setFillColor(sf::Color::Blue);
-    button.setSize({75,50});
+    sf::Color b = sf::Color::Blue;
+    b.a = 75;
+    button.setFillColor(b);
+    button.setSize({400,50});
 }
 
 void Button::draw(sf::RenderTarget &target, sf::RenderStates states) const {
