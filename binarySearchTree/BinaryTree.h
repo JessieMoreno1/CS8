@@ -6,12 +6,13 @@
 #define BINARYSEARCHTREE_BINARYTREE_H
 
 #include "Node.h"
+#include <queue>
 
 template <typename T>
 class BinaryTree {
 private:
+    std::queue<Node<T>> q;
     Node<T>* root = nullptr;
-//    bool isGreater(Node<T>* node, Node<T>* parent);
 
     // traversal
     void preorder(Node<T>* node, void (*f)(T&));
@@ -25,6 +26,7 @@ private:
     void postorder(Node<T>* node, void (*f)(T&));
     template <typename S>
     void postorder(Node<T>* node, void (S::*f)(T&), S& obj);
+
 
     void push(Node<T>* &node, const T& data);
 
@@ -50,16 +52,23 @@ public:
     template <typename S>
     void preorder(void (S::*f)(T&), S& obj);
 
-    void inorder(Node<T>* node, void(*f)(T&));
-    template <typename S>
-    void inorder(Node<T>* node, void (S::*f)(T&), S& obj);
+    void inorder( void(*f)(T&));
 
-    void postorder(Node<T>* node, void (*f)(T&));
     template <typename S>
-    void postorder(Node<T>* node, void (S::*f)(T&), S& obj);
+    void inorder( void (S::*f)(T&), S& obj);
+
+    void postorder(void (*f)(T&));
+
+    template <typename S>
+    void postorder( void (S::*f)(T&), S& obj);
+    
+    template <typename S>
+    void breatheFirst( void(*f)(T&), S obj);
+
 
     // insert function
     void push(const T& data );
+
 
 
 };

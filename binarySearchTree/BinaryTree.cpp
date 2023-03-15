@@ -141,25 +141,49 @@ void BinaryTree<T>::postorder(Node<T> *node, void (*f)(T &), S &obj) {
 }
 
 template<typename T>
-void BinaryTree<T>::inorder(Node<T> *node, void (*f)(T &)) {
+template<typename S>
+void BinaryTree<T>::breatheFirst( void (*f)(T &), S obj) {
+    q.push(root);
+
+    while (!q.empty())
+    {
+        if (q.front() -> left)
+        {
+            q.push(q.front() -> left);
+        }
+        if (q.front() -> right)
+        {
+            q.push(q.front() -> right);
+        }
+
+        (obj.*f)(q.front() -> data);
+
+        q.pop();
+
+    }
+}
+
+
+template<typename T>
+void BinaryTree<T>::postorder(void (*f)(T &)) {
+    postorder(root,f);
+}
+
+template<typename T>
+void BinaryTree<T>::inorder(void (*f)(T &)) {
     inorder(root,f);
 }
 
 template<typename T>
 template<typename S>
-void BinaryTree<T>::inorder(Node<T> *node, void (*f)(T &), S &obj) {
-    inorder(root,f,obj);
-}
-
-template<typename T>
-void BinaryTree<T>::postorder(Node<T> *node, void (*f)(T &)) {
-    postorder(root,f);
+void BinaryTree<T>::postorder(void (*f)(T &), S &obj) {
+    postorder(root,f,obj);
 }
 
 template<typename T>
 template<typename S>
-void BinaryTree<T>::postorder(Node<T> *node, void (*f)(T &), S &obj) {
-    postorder(root,f,obj);
+void BinaryTree<T>::inorder(void (*f)(T &), S &obj) {
+
 }
 
 #endif
