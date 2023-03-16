@@ -7,7 +7,7 @@
 Application::Application() {
 
     init();
-
+    Typing t;
     sf::RenderWindow window({1920,1080,32}, "");
 
     while (window.isOpen())
@@ -20,9 +20,11 @@ Application::Application() {
                 window.close();
             }
 
+            t.addEventHandler(window,event);
         }
 
         window.clear(sf::Color::White);
+
         window.draw(companyTitle);
         window.draw(welcomeText);
         window.draw(welcomeSubtext);
@@ -32,6 +34,8 @@ Application::Application() {
 
         window.draw(passwordText);
         window.draw(passwordTextbox);
+
+        window.draw(t);
 
         window.draw(submitButton);
         window.draw(rotation);
@@ -50,13 +54,13 @@ void Application::init() {
 
     welcomeText.setFillColor(sf::Color::Black);
     welcomeText.setString("Welcome Back");
-    welcomeText.setPosition({240,350});
+    welcomeText.setPosition({250,350});
     welcomeText.setFont(Font::getFont(BEBAS));
     welcomeText.setCharacterSize(75);
 
     welcomeSubtext.setFillColor(sf::Color::Black);
     welcomeSubtext.setString("Welcome Back! Please enter your details.");
-    welcomeSubtext.setPosition({250,440});
+    welcomeSubtext.setPosition({260,440});
     welcomeSubtext.setFont(Font::getFont(BEBAS));
     welcomeSubtext.setCharacterSize(25);
 
@@ -79,3 +83,6 @@ void Application::init() {
     submitButton.setPosition(250,800);
     submitButton.setButtonText("Submit");
 }
+
+
+

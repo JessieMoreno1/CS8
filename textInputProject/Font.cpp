@@ -16,6 +16,7 @@ std::string Font::getPath(fontsEnum font) {
     {
         case BEBAS: return "Fonts/Bebas-Regular.ttf";
         case SUNFLOWER: return "Fonts/MADE Sunflower PERSONAL USE.otf";
+        case TALLFILM: return "Fonts/Tall Film.ttf";
             // add path if adding new fonts and add in fontEnum.h
         case LAST_FONT: return "";
 

@@ -20,3 +20,10 @@ void Textbox::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 void Textbox::setPosition(int x, int y) {
     textbox.setPosition({static_cast<float>(x),static_cast<float>(y)});
 }
+
+void Textbox::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
+    if (MouseEvents::isClick(textbox, window))
+    {
+        std::cout << "Textbox was clicked" << std::endl;
+    }
+}

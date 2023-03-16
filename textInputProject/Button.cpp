@@ -30,3 +30,6 @@ void Button::setButtonText(std::string text) {
     buttonText.move(0,-10);
 }
 
+void Button::setButtonTextColor(sf::Color color) {
+    buttonText.setFillColor(color);
+}

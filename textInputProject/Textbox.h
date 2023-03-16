@@ -6,6 +6,8 @@
 #define TEXTINPUTPROJECT_TEXTBOX_H
 
 #include <SFML/Graphics.hpp>
+#include "MouseEvents.h"
+#include <iostream>
 
 class Textbox : public sf::Drawable {
 private:
@@ -13,7 +15,7 @@ private:
 public:
     Textbox();
     void setPosition(int x, int y);
-
+    void addEventHandler(sf::RenderWindow& window, sf::Event& event);
 protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 };

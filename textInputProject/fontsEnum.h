@@ -8,6 +8,7 @@
 enum fontsEnum{
     BEBAS,
     SUNFLOWER,
+    TALLFILM,
     LAST_FONT
 };
 

@@ -10,6 +10,8 @@
 #include "Font.h"
 #include "Button.h"
 #include "ImageRotation.h"
+#include "MouseEvents.h"
+#include "Typing.h"
 
 class Application {
 private:
