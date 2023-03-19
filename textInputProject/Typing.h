@@ -8,15 +8,16 @@
 
 #include <SFML/Graphics.hpp>
 #include "Font.h"
+#include "Cursor.h"
+#include "Letter.h"
 #include <list>
 #include <iostream>
-#include "Letter.h"
 
-class Typing  : public sf::Drawable, sf::Transformable  {
+class Typing  : public sf::Drawable, sf::Transformable, public States  {
 private:
     Letter letter;
+    Cursor cursor;
     std::list<Letter> string;
-
     int count = 0;
     sf::Vector2f startPos;
 public:

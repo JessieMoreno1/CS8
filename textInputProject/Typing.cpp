@@ -25,9 +25,15 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
 }
 
 void Typing::setCharacterPosition() {
+//    if (string.empty())
+//    {
+//        cursor.setPosition(startPos);
+//    }
+
     if (string.size() == 1) {
         string.back().setPosition(startPos);
     }
+
     else {
         string.back().setPosition(std::prev(string.end(), 2)->getPosition().x + std::prev(string.end(), 2)->getGlobalBounds().width
                                   + std::prev(string.end(), 2)->getLetterSpacing(), startPos.y );

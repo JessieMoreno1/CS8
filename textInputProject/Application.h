@@ -9,14 +9,18 @@
 #include "Textbox.h"
 #include "Font.h"
 #include "Button.h"
+#include "Cursor.h"
 #include "ImageRotation.h"
 #include "MouseEvents.h"
 #include "Typing.h"
+#include "TypingInput.h"
 
 class Application {
 private:
-    Textbox emailTextbox, passwordTextbox;
-    Button submitButton;
+    // Textbox emailTextbox, passwordTextbox;
+    // Button submitButton;
+    // Cursor cursor;
+    TypingInput typingInput;
     sf::Text companyTitle, welcomeText, welcomeSubtext, emailText, passwordText;
     ImageRotation rotation;
 

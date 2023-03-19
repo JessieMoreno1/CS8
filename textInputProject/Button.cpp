@@ -33,3 +33,7 @@ void Button::setButtonText(std::string text) {
 void Button::setButtonTextColor(sf::Color color) {
     buttonText.setFillColor(color);
 }
+
+sf::FloatRect Button::getGlobalBounds() const {
+    return button.getGlobalBounds();
+}

@@ -18,6 +18,7 @@ public:
     void setPosition(float x, float y);
     void setButtonText(std::string text);
     void setButtonTextColor(sf::Color color);
+    sf::FloatRect getGlobalBounds() const;
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };

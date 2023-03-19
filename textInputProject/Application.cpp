@@ -6,13 +6,14 @@
 
 Application::Application() {
 
-    init();
-    Typing t;
+    init();  // in charge of the UI aspect of the program
+
     sf::RenderWindow window({1920,1080,32}, "");
 
     while (window.isOpen())
     {
         sf::Event event;
+
         while(window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
@@ -20,8 +21,8 @@ Application::Application() {
                 window.close();
             }
 
-            t.addEventHandler(window,event);
         }
+        typingInput.update();
 
         window.clear(sf::Color::White);
 
@@ -29,22 +30,19 @@ Application::Application() {
         window.draw(welcomeText);
         window.draw(welcomeSubtext);
 
+        window.draw(typingInput);
+
         window.draw(emailText);
-        window.draw(emailTextbox);
-
         window.draw(passwordText);
-        window.draw(passwordTextbox);
-
-        window.draw(t);
-
-        window.draw(submitButton);
         window.draw(rotation);
+
 
         window.display();
     }
 }
 
-void Application::init() {
+void Application::init()    // UI aspects setup
+{
 
     companyTitle.setFillColor(sf::Color::Black);
     companyTitle.setString("Jessie UI");
@@ -70,18 +68,12 @@ void Application::init() {
     emailText.setFont(Font::getFont(BEBAS));
     emailText.setCharacterSize(25);
 
-    emailTextbox.setPosition(250,580);
-
     passwordText.setFillColor(sf::Color::Black);
     passwordText.setString("Password");
     passwordText.setPosition({250,650});
     passwordText.setFont(Font::getFont(BEBAS));
     passwordText.setCharacterSize(25);
 
-    passwordTextbox.setPosition(250,690);
-
-    submitButton.setPosition(250,800);
-    submitButton.setButtonText("Submit");
 }
 
 
