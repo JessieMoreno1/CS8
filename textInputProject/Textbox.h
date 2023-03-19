@@ -9,17 +9,16 @@
 #include "MouseEvents.h"
 #include "States.h"
 #include "Cursor.h"
+#include "Typing.h"
 #include <iostream>
 
 class Textbox : public sf::Drawable , public sf::Transformable, public States {
 private:
     sf::RectangleShape textbox;
-    //Cursor cursor;
 public:
     Textbox();
     sf::FloatRect getGlobalBounds() const;
     void setPosition(sf::Vector2f position);
-    void addEventHandler(sf::RenderWindow& window, sf::Event& event);
 protected:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 };

@@ -7,7 +7,7 @@
 Cursor::Cursor() {
     cursorText.setFont(Font::getFont(BEBAS));
     cursorText.setFillColor(sf::Color::Blue);
-    cursorText.setCharacterSize(40);
+    cursorText.setCharacterSize(30);
 }
 
 void Cursor::update() {

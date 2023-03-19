@@ -5,10 +5,10 @@
 #include "Typing.h"
 
 Typing::Typing() {
-    letter.setFont(Font::getFont(TALLFILM));
+    letter.setFont(Font::getFont(BEBAS));
     letter.setFillColor(sf::Color::Black);
     letter.setCharacterSize(40);
-    startPos = {255, 570};
+    startPos = { 250,580};
 }
 
 void Typing::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
@@ -25,10 +25,6 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
 }
 
 void Typing::setCharacterPosition() {
-//    if (string.empty())
-//    {
-//        cursor.setPosition(startPos);
-//    }
 
     if (string.size() == 1) {
         string.back().setPosition(startPos);

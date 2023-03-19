@@ -22,6 +22,7 @@ Application::Application() {
             }
 
         }
+        typingInput.addEventHandler(window, event);
         typingInput.update();
 
         window.clear(sf::Color::White);

@@ -15,8 +15,11 @@
 
 class TypingInput : public sf::Drawable, public States {
 private:
-    Typing typing;
-    Cursor cursor;
+    Typing typing1;
+    Typing typing2;
+
+    Cursor cursor1;
+    Cursor cursor2;
     Button button;
     Textbox textbox1, textbox2;
 public:
