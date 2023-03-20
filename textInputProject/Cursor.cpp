@@ -31,6 +31,10 @@ void Cursor::setPosition(sf::Vector2f position) {
     cursorText.setPosition(position);
 }
 
+void Cursor::setPosition(float x, float y) {
+   cursorText.setPosition(x, y);
+}
+
 void Cursor::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     states.transform *= getTransform();
 
@@ -39,3 +43,4 @@ void Cursor::draw(sf::RenderTarget &target, sf::RenderStates states) const {
         target.draw(cursorText, states);
     }
 }
+

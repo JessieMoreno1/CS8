@@ -29,6 +29,12 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
             setCharacterPosition();
         }
     }
+
+    if ((event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Z && sf::Keyboard::LControl) && !string.empty())
+    {
+        string.pop_back();
+    }
+
 }
 
 void Typing::setCharacterPosition() {
@@ -54,4 +60,27 @@ void Typing::setStartPos(sf::Vector2f position) {
     startPos = position;
 }
 
+float Typing::coordinateX() {
+    if (!string.empty()) {
+        sf::Text lastCharacter = string.back();
+        return lastCharacter.getPosition().x + lastCharacter.getGlobalBounds().width + lastCharacter.getLetterSpacing();
+
+    }
+    else
+    {
+        return getStartPosX();
+    }
+}
+
+float Typing::coordinateY() {
+    return getStartPosY();
+}
+
+float Typing::getStartPosX() {
+    return startPos.x;
+}
+
+float Typing::getStartPosY() {
+    return startPos.y;
+}
 

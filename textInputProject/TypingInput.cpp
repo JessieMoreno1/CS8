@@ -45,7 +45,6 @@ void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
         cursor1.disableState(HIDDEN);
         cursor2.enableState(HIDDEN);
 
-//        typing1.disableState(HIDDEN);
         typing1.setStartPos({250, 580});
     }
     else if (MouseEvents::isClick(textbox2, window))
@@ -74,13 +73,19 @@ void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
     if (!cursor2.checkState(HIDDEN))
     {
         typing2.addEventHandler(window, event);
+
     }
+    update();
 }
 
 void TypingInput::update() {
+//    init();
     if (!checkState(HIDDEN))
     {
+        cursor1.setPosition(typing1.coordinateX(),typing1.coordinateY()); // in charge of positioning the cursor for
         cursor1.update();
+
+        cursor2.setPosition(typing2.coordinateX(),typing2.coordinateY());
         cursor2.update();
     }
 }

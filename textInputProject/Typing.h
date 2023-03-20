@@ -26,6 +26,11 @@ public:
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);
     void setCharacterPosition();
     void setStartPos(sf::Vector2f position);
+    float coordinateX();
+    float coordinateY();
+    float getStartPosX();
+    float getStartPosY();
+
 protected:
     void draw(sf::RenderTarget &window, sf::RenderStates states) const override;
 
