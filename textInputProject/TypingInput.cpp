@@ -21,8 +21,8 @@ void TypingInput::draw(sf::RenderTarget &target, sf::RenderStates states) const 
 
     target.draw(button);
 
-    target.draw(typing1);
-    target.draw(typing2);
+    target.draw(typing1, states);
+    target.draw(typing2, states);
 
 }
 
@@ -35,25 +35,29 @@ void TypingInput::init() {
 
     cursor1.setPosition({250,580});
     cursor2.setPosition({250,690});
-
 }
 
 void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
+
+    // in charge of the textboxes and their actions
     if (MouseEvents::isClick(textbox1, window))
     {
         cursor1.disableState(HIDDEN);
         cursor2.enableState(HIDDEN);
 
-        typing1.addEventHandler(window, event);
+        typing1.disableState(HIDDEN);
+        typing1.setStartPos({250, 580});
     }
     else if (MouseEvents::isClick(textbox2, window))
     {
         cursor1.enableState(HIDDEN);
         cursor2.disableState(HIDDEN);
 
-        typing2.addEventHandler(window, event);
+        typing2.setStartPos({250, 690});
+
     }
 
+    // in charge of the button hovering color and the action the button does
     if (MouseEvents::isHover(button, window))
     {
         button.setButtonTextColor(sf::Color::White);
@@ -63,7 +67,8 @@ void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
         button.setButtonTextColor(sf::Color::Black);
     }
 
-
+    typing1.addEventHandler(window,event);
+    typing2.addEventHandler(window, event);
 }
 
 void TypingInput::update() {

@@ -20,9 +20,9 @@ Application::Application() {
             {
                 window.close();
             }
-
+            typingInput.addEventHandler(window, event);
         }
-        typingInput.addEventHandler(window, event);
+
         typingInput.update();
 
         window.clear(sf::Color::White);

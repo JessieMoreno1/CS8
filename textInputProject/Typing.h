@@ -24,6 +24,7 @@ public:
     Typing();
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);
     void setCharacterPosition();
+    void setStartPos(sf::Vector2f position);
 protected:
     void draw(sf::RenderTarget &window, sf::RenderStates states) const override;
 

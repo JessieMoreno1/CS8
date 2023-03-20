@@ -13,14 +13,16 @@
 #include "Button.h"
 #include "MouseEvents.h"
 
-class TypingInput : public sf::Drawable, public States {
+class TypingInput : public sf::Drawable, public States, public sf::Transformable {
 private:
     Typing typing1;
     Typing typing2;
 
     Cursor cursor1;
     Cursor cursor2;
+
     Button button;
+
     Textbox textbox1, textbox2;
 public:
     TypingInput();
