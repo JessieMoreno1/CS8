@@ -28,8 +28,8 @@ public:
     void setStartPos(sf::Vector2f position);
     float coordinateX();
     float coordinateY();
-    float getStartPosX();
-    float getStartPosY();
+    float getStartPosX() const;
+    float getStartPosY() const;
 
 protected:
     void draw(sf::RenderTarget &window, sf::RenderStates states) const override;

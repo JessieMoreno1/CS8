@@ -76,11 +76,11 @@ float Typing::coordinateY() {
     return getStartPosY();
 }
 
-float Typing::getStartPosX() {
+float Typing::getStartPosX() const {
     return startPos.x;
 }
 
-float Typing::getStartPosY() {
+float Typing::getStartPosY() const {
     return startPos.y;
 }
 
