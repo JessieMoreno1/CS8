@@ -22,6 +22,7 @@ private:
     sf::Vector2f startPos;
 public:
     Typing();
+    // Typing(sf::Vector2f position);
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);
     void setCharacterPosition();
     void setStartPos(sf::Vector2f position);

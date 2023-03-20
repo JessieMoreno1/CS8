@@ -11,6 +11,13 @@ Typing::Typing() {
     //startPos = { 250,580};
 }
 
+//Typing::Typing(sf::Vector2f position) {
+//    letter.setFont(Font::getFont(BEBAS));
+//    letter.setFillColor(sf::Color::Black);
+//    letter.setCharacterSize(37);
+//    startPos = position;
+//}
+
 void Typing::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
     if (event.type == sf::Event::TextEntered)
     {

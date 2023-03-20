@@ -45,7 +45,7 @@ void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
         cursor1.disableState(HIDDEN);
         cursor2.enableState(HIDDEN);
 
-        typing1.disableState(HIDDEN);
+//        typing1.disableState(HIDDEN);
         typing1.setStartPos({250, 580});
     }
     else if (MouseEvents::isClick(textbox2, window))
@@ -67,8 +67,14 @@ void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
         button.setButtonTextColor(sf::Color::Black);
     }
 
-    typing1.addEventHandler(window,event);
-    typing2.addEventHandler(window, event);
+    if (!cursor1.checkState(HIDDEN))
+    {
+        typing1.addEventHandler(window,event);
+    }
+    if (!cursor2.checkState(HIDDEN))
+    {
+        typing2.addEventHandler(window, event);
+    }
 }
 
 void TypingInput::update() {
