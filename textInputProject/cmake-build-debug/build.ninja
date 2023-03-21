@@ -1,0 +1,225 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: textInputProject
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target textInputProject
+
+
+#############################################
+# Order-only phony target for textInputProject
+
+build cmake_object_order_depends_target_textInputProject: phony || CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/main.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/main.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Application.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Application.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Application.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Textbox.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Textbox.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Textbox.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Cursor.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Cursor.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Cursor.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Font.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Font.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Font.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Button.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Button.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Button.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Helper.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Helper.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Helper.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/ImageRotation.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/ImageRotation.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/ImageRotation.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/MouseEvents.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/MouseEvents.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/MouseEvents.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Typing.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Typing.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Typing.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/Letter.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/Letter.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/Letter.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/States.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/States.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/States.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+build CMakeFiles/textInputProject.dir/TypingInput.cpp.o: CXX_COMPILER__textInputProject_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/textInputProject/TypingInput.cpp || cmake_object_order_depends_target_textInputProject
+  DEP_FILE = CMakeFiles/textInputProject.dir/TypingInput.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/textInputProject.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target textInputProject
+
+
+#############################################
+# Link the executable textInputProject
+
+build textInputProject: CXX_EXECUTABLE_LINKER__textInputProject_Debug CMakeFiles/textInputProject.dir/main.cpp.o CMakeFiles/textInputProject.dir/Application.cpp.o CMakeFiles/textInputProject.dir/Textbox.cpp.o CMakeFiles/textInputProject.dir/Cursor.cpp.o CMakeFiles/textInputProject.dir/Font.cpp.o CMakeFiles/textInputProject.dir/Button.cpp.o CMakeFiles/textInputProject.dir/Helper.cpp.o CMakeFiles/textInputProject.dir/ImageRotation.cpp.o CMakeFiles/textInputProject.dir/MouseEvents.cpp.o CMakeFiles/textInputProject.dir/Typing.cpp.o CMakeFiles/textInputProject.dir/Letter.cpp.o CMakeFiles/textInputProject.dir/States.cpp.o CMakeFiles/textInputProject.dir/TypingInput.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+  OBJECT_DIR = CMakeFiles/textInputProject.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = textInputProject
+  TARGET_PDB = textInputProject.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/textInputProject/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/textInputProject/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/textInputProject" -B"/Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/textInputProject/cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/jessiemejia/Library/Mobile Documents/com~apple~CloudDocs/CS8/textInputProject/cmake-build-debug
+
+build all: phony textInputProject
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake /opt/homebrew/lib/cmake/SFML/SFMLConfigDependencies.cmake /opt/homebrew/lib/cmake/SFML/SFMLConfigVersion.cmake /opt/homebrew/lib/cmake/SFML/SFMLSharedTargets-release.cmake /opt/homebrew/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake /opt/homebrew/lib/cmake/SFML/SFMLConfigDependencies.cmake /opt/homebrew/lib/cmake/SFML/SFMLConfigVersion.cmake /opt/homebrew/lib/cmake/SFML/SFMLSharedTargets-release.cmake /opt/homebrew/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
