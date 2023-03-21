@@ -46,6 +46,7 @@ void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
         cursor2.enableState(HIDDEN);
 
         typing1.setStartPos({250, 580});
+
     }
     else if (MouseEvents::isClick(textbox2, window))
     {
@@ -76,6 +77,7 @@ void TypingInput::addEventHandler(sf::RenderWindow &window, sf::Event event) {
 
     }
     update();
+    
 }
 
 void TypingInput::update() {

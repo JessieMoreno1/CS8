@@ -7,7 +7,7 @@
 Typing::Typing() {
     letter.setFont(Font::getFont(BEBAS));
     letter.setFillColor(sf::Color::Black);
-    letter.setCharacterSize(37);
+    letter.setCharacterSize(35);
     //startPos = { 250,580};
 }
 
@@ -19,14 +19,15 @@ Typing::Typing() {
 //}
 
 void Typing::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
-    if (event.type == sf::Event::TextEntered)
+    if (string.size() < 30)
     {
-        if (event.text.unicode < 128)
-        {
-            std::cout << "ASCII character typed : " << static_cast<char>(event.text.unicode) << std::endl;
-            letter.setString(static_cast<char>(event.text.unicode));
-            string.push_back(letter);
-            setCharacterPosition();
+        if (event.type == sf::Event::TextEntered) {
+            if (event.text.unicode < 128) {
+                std::cout << "ASCII character typed : " << static_cast<char>(event.text.unicode) << std::endl;
+                letter.setString(static_cast<char>(event.text.unicode));
+                string.push_back(letter);
+                setCharacterPosition();
+            }
         }
     }
 
@@ -34,6 +35,7 @@ void Typing::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
     {
         string.pop_back();
     }
+    isNumberical();
 
 }
 
@@ -82,5 +84,32 @@ float Typing::getStartPosX() const {
 
 float Typing::getStartPosY() const {
     return startPos.y;
+}
+
+// needs to be completed again
+void Typing::isSpecialWord() {
+    std::string specialWords[] = {"int", "char", "double", "float"};
+
+    for (auto iter = string.begin(); iter != string.end() ; ++iter) {
+        auto current = iter -> getString()[0];
+
+
+    }
+}
+
+void Typing::isNumberical() {
+    for (auto iter = string.begin(); iter != string.end(); ++iter) {
+        auto current = iter -> getString()[0];
+
+        if (current >= '0' && current <= '9')
+        {
+            iter -> setFillColor(sf::Color::Red);
+        }
+
+    }
+}
+
+void Typing::isOperator() {
+
 }
 

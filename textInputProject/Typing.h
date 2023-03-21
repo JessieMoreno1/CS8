@@ -11,6 +11,7 @@
 #include "Cursor.h"
 #include "Letter.h"
 #include <list>
+#include <array>
 #include <iostream>
 
 class Typing  : public sf::Drawable, sf::Transformable, public States  {
@@ -20,6 +21,10 @@ private:
     std::list<Letter> string;
     int count = 0;
     sf::Vector2f startPos;
+
+    void isNumberical();
+    void isSpecialWord();
+    void isOperator();
 public:
     Typing();
     // Typing(sf::Vector2f position);
@@ -30,6 +35,7 @@ public:
     float coordinateY();
     float getStartPosX() const;
     float getStartPosY() const;
+
 
 protected:
     void draw(sf::RenderTarget &window, sf::RenderStates states) const override;
