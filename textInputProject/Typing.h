@@ -35,6 +35,7 @@ public:
     float coordinateY();
     float getStartPosX() const;
     float getStartPosY() const;
+    std::string getText();
 
 
 protected:

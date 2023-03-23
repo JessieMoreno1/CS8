@@ -52,3 +52,7 @@ void MultiText::setCharacterPosition() {
     }
 }
 
+std::string MultiText::getString() {
+
+}
+

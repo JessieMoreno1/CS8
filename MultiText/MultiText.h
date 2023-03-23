@@ -23,6 +23,7 @@ public:
     MultiText();
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);
     void setCharacterPosition();
+    std::string getString();
 protected:
     void draw(sf::RenderTarget &window, sf::RenderStates states) const override;
 

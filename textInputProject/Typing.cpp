@@ -113,3 +113,9 @@ void Typing::isOperator() {
 
 }
 
+std::string Typing::getText() {
+    std::string s;
+
+    return s;
+}
+
