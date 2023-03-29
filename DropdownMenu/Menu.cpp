@@ -16,6 +16,7 @@ Menu::Menu(std::initializer_list<std::string> items) {
     std::initializer_list<std::string>::iterator iter = items.begin();
 
     header.setString(*iter);
+
     header.setBoxSize({200,50});
     ++iter;
     for(; iter != items.end(); ++iter)
@@ -28,7 +29,7 @@ Menu::Menu(std::initializer_list<std::string> items) {
 void Menu::eventHandler(sf::RenderWindow &window, sf::Event event) {
     list.eventHandler(window, event);
     header.eventHandler(window, event);
-
+    
     if(MouseEvents::isClick(header, window))
     {
         list.disableState(HIDDEN);
@@ -40,11 +41,16 @@ void Menu::eventHandler(sf::RenderWindow &window, sf::Event event) {
         {
             if(MouseEvents::isClick(l, window))
             {
+                header.setString(l.getString());
+
                 if(l.getString() == "Resize")
                 {
                     window.setSize({1080,970});
                 }
+
+                list.enableState(HIDDEN);
             }
+
         }
         list.enableState(HIDDEN);
     }
