@@ -7,17 +7,7 @@
 #include "FileReader.h"
 
 template<typename T>
-FileReader<T>::FileReader()
-{
-}
-template<typename T>
-FileReader<T>::FileReader(const std::string& filename)
-{
-    getData(filename);
-}
-template<typename T>
-void FileReader<T>::getData(const std::string& filename)
-{
+std::vector<T> FileReader<T>::getData(const std::string &filename) {
     std::vector<T> data;
 
     std::ifstream file;
@@ -34,16 +24,6 @@ void FileReader<T>::getData(const std::string& filename)
     file.close();
 
     return data;
-}
-template<typename T>
-typename FileReader<T>::iterator FileReader<T>::end()
-{
-    return data.end();
-}
-template<typename T>
-typename FileReader<T>::iterator FileReader<T>::begin()
-{
-    return data.begin();
 }
 
 #endif

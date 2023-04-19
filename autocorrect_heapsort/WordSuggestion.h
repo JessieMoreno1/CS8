@@ -11,20 +11,25 @@
 #include "Word.h"
 #include "Heap.h"
 #include <vector>
+#include "Suggester.h"
 
-
+template<class T>
 class WordSuggestion : public sf::Drawable, public sf::Transformable {
 private:
-    Typing typing;
-    Heap<Word> words;
+    sf::Text suggestion;
+    Suggester wordSuggester;
+
+    T *input;
 
 public:
-    WordSuggestion();
-    WordSuggestion(std::string filename);
-    void init();
-protected:
+    WordSuggestion(T* input);
+
+    void eventHandler(sf::RenderWindow &window, const sf::Event &event) override;
+    void update(const sf::RenderWindow &window) override;
+    //Snapshot getSnapshot() override;
+    //void applySnapshot(const Snapshot &snapshot) override;
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };
 
-
+#include "WordSuggestion.cpp"
 #endif //AUTOCORRECT_HEAPSORT_WORDSUGGESTION_H

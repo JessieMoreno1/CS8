@@ -12,89 +12,55 @@ Heap<T>::Heap() {
 
 }
 
-/*
- * Reheapify Up logic
- * --------------------------------------
- * ReheapifyUp ( int childIndex) // starting with the child index
- * - get the parent index
- * - compare child and parent values
- *      - if child's value is greater than parent value, then swap values
- * - call the reheapifyUp again ( recursive way ) , pass in the parent index.
- */
 template<typename T>
-void Heap<T>::reheapifyUp(int childIndex) {
-    if (childIndex != 0)
-    {
-        int parent = getParent(childIndex);
+void Heap<T>::push(const T &item) {
+    this->push_back(item);
+    reheapifyUp(this->size()-1);
+}
+
+template<typename T>
+void Heap<T>::pop() {
+    swap(this->size() - 1,0);
+    this->pop_back();
+    reheapifyDown(this->size() - 1);
+}
+
+template<typename T>
+T &Heap<T>::top() {
+    return this->front() ;
+}
+
+template<typename T>
+void Heap<T>::swap(int childIndex, int parentIndex) {
+    std::swap(this->at(childIndex),this->at(parentIndex));
+}
+
+template<typename T>
+void Heap<T>::reheapifyUp(int index) {
+    if (index != 0) {
+        int parent = getParent(index);
         int max = getMaxChild(parent);
-        if (max != parent ) {
-            swap(childIndex, parent);
+        if(max == index){
+            swap(parent, index);
             reheapifyUp(parent);
         }
     }
 }
 
-/*
- * ReheapifyDown Logic
- * -------------------------------------
- * ReheapifyDown(int parentIndex) // starting with the parent index
- * - Get the max, it is equal to the max child index. Pass in the parent
- *      - max = maxChildIndex(Parent)
- * - if max is greater than parent, then swap child and parent
- * - reheapifyDown ( max )
- */
 template<typename T>
 void Heap<T>::reheapifyDown(int parentIndex) {
-    if (parentIndex != 0)
-    {
+    if(!this->empty()) {
         int max = getMaxChild(parentIndex);
         if (max != parentIndex) {
-            swap(parentIndex, max);
+            swap(parentIndex,max);
             reheapifyDown(max);
         }
     }
 }
 
 template<typename T>
-void Heap<T>::swap(int childIndex, int parentIndex) {
-    std::swap(v.at(childIndex), v.at(parentIndex));
-}
-
-template<typename T>
-void Heap<T>::push(const T &item) {
-    v.push_back(item);
-    reheapifyUp(size() - 1);
-}
-
-template<typename T>
-void Heap<T>::pop() {
-    swap (size() - 1,0);
-    v.pop_back();
-    reheapifyDown();
-}
-
-template<typename T>
-T &Heap<T>::top() {
-    return v.front();
-}
-
-template<typename T>
-int Heap<T>::size() {
-    return v.size();
-}
-
-template<typename T>
-bool Heap<T>::empty() {
-    if (v.empty())
-        return true;
-    return false;
-}
-
-template<typename T>
 int Heap<T>::getParent(int childIndex) {
-    int index = childIndex + 1; // taking into account the root
-
-    return (index - 1) / 2;
+    return (childIndex - 1) / 2;
 }
 
 template<typename T>
@@ -104,41 +70,37 @@ int Heap<T>::getLeftChild(int parentIndex) {
 
 template<typename T>
 int Heap<T>::getRightChild(int parentIndex) {
-    return (parentIndex * 2) + 2;
+    return parentIndex * 2 + 2;
 }
 
 template<typename T>
-int Heap<T>::getMaxChild(int parentIndex) {
-    int maxChild;
-    if ( size() > parentIndex * 2 + 2)
-    {
-        int rightChild = getRightChild(parentIndex);
-        int leftChild = getLeftChild(parentIndex);
-
-        if (v.at(rightChild) > v.at(leftChild))
-        {
-            maxChild = rightChild;
-        }
-        else
-        {
-            maxChild = leftChild;
-        }
-        return maxChild;
+int Heap<T>::getMaxChild(int index) {
+    if (this->size() > index * 2 + 2) {
+        int right = getRightChild(index);
+        int left = getLeftChild(index);
+        int maxChild = this->at(right) > this->at(left) ? right: left;
+        return this->at(index) > this->at(maxChild) ? index: maxChild;
     }
+    else if (this->size() > index * 2 + 1){
+        int left = getLeftChild(index);
+        return this->at(index) > this->at(left) ? index: left;
+    }
+    return index;
 }
 
 template<typename T>
-void Heap<T>::print() {
-    for (int i = 0; i < v.size(); ++i) {
-        std::cout << v.at(i) << std::endl;
-    }
+const std::vector<T> &Heap<T>::getVector() const {
+    return *this;
 }
 
 template<typename T>
-void Heap<T>::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    for (int i = 0; i < v.size(); ++i) {
-        target.draw(v.at(i));
-    }
+void Heap<T>::sort() {
+
+}
+
+template<typename T>
+void Heap<T>::operator+=(const T &item) {
+    push(item);
 }
 
 #endif

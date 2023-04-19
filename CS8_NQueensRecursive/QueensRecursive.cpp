@@ -4,50 +4,69 @@
 
 #include "QueensRecursive.h"
 
-QueensRecursive::QueensRecursive() : QueensRecursive(6) {
+QueensRecursive::QueensRecursive(){
 
 }
 
-QueensRecursive::QueensRecursive(int n) {
+QueensRecursive::QueensRecursive(int n) : n(6) {
     // create board
-    for (int i = 0; i < n; i++)
+    std::vector<int> temp(n, -1);
+    std::vector<int> x = temp;
+    solve(0);
+
+    if(x[n-1] ==-1)
     {
-        for (int j = 0; j < n; j++) {
-            board[i][j] = 0;
-            std::cout << board[i][j] << " ";
+        std::cout<< "No solution"<<std::endl;
+    }
+}
+
+bool QueensRecursive::place(int k, int i) {
+    for(int j=0; j<k ;j++)
+    {
+        if((x[j]==i)||(abs(x[j]-i) == abs(j-k)))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+void QueensRecursive::print() {
+    for(int i=0; i < n;i++)
+    {
+        for(int j=0;j<x[i];j++)
+        {
+            std::cout<<"# ";
+        }
+        std::cout<<"Q ";
+        for(int j=x[i];j<n-1;j++)
+        {
+            std::cout<<"# ";
         }
         std::cout<<std::endl;
     }
+    for(int i=0;i<x.size();i++)
+    {
+        std::cout<<x[i] <<" ";
+    }
+    std::cout<<std::endl<<std::endl;
 }
 
-bool QueensRecursive::place(int row, int col) {
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < col; j++) {
-            // place queen if the index is right
-            board[i][j] = 'Q';
-        }
-    }
-    std::cout << std::endl; // spacing to distinguish boards
-
-    for (int i = 0; i < row; i++)
+bool QueensRecursive::solve(int k) {
+    for(int i=0; i<n;i++)
     {
-        for (int j = 0; j < col; j++)
+        if(place(k,i))
         {
-            std::cout << board[i][j] << " ";
+            x[k]= i;
+            if(k==n-1)
+            {
+                print();
+            }
+            else
+            {
+                solve(k+1);
+            }
         }
-        std::cout << std::endl;
     }
-}
-
-std::array<std::string> QueensRecursive::callBoard() {
-    for (int i = 0; i < row; i++)
-    {
-        for (int j = 0; j < col; j++)
-        {
-            std::cout << board[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    return board;
 }
 

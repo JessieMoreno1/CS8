@@ -10,19 +10,13 @@
 #include <fstream>
 #include <string>
 #include <iterator>
-template<typename T>
 
-class FileReader : public std::iterator<std::random_access_iterator_tag, T>
+
+template<typename T>
+class FileReader
 {
-private:
-    void getData(const std::string& filename);
-    std::vector<T> data;
 public:
-    typedef typename std::vector<T>::iterator iterator;
-    FileReader();
-    FileReader(const std::string& filename);
-    iterator begin();
-    iterator end();
+    static std::vector<T> getData(const std::string& filename);
 };
 
 #include "FileReader.cpp"

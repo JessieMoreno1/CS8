@@ -6,17 +6,18 @@
 #define CS8_NQUEENSRECURSIVE_QUEENSRECURSIVE_H
 
 #include <iostream>
-
+#include <vector>
 
 class QueensRecursive {
 private:
-    int board[0][0];
-    int size;
+    std::vector<int> x;
+    int n = 0;
 public:
     QueensRecursive();
     QueensRecursive(int n);
-    std::array<int> callBoard();
+    bool solve(int k);
     bool place(int row, int col);
+    void print();
 };
 
 

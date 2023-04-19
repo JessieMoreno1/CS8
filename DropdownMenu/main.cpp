@@ -6,6 +6,7 @@ int main() {
     window.setFramerateLimit(60);
 
     Menu m = {"file", "open", "Resize", "save", "close"};
+    m.setPosition({50,50});
 
     while (window.isOpen())
     {

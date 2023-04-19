@@ -25,31 +25,31 @@
 
 #include <vector>
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
 template<typename T>
-class Heap : public sf::Drawable{
-private:
-    std::vector<T> v;
+class Heap : public std::vector<T> {
+
 public:
     Heap();
-    void reheapifyUp(int childIndex);
-    void reheapifyDown(int parentIndex);
-    void swap(int childIndex, int parentIndex);
     void push(const T& item);
     void pop();
     T& top();
-    int size();
-    bool empty();
-    void print();
+    void swap(int childIndex, int parentIndex);
 
-private:
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
+    void reheapifyUp(int childIndex);
+    void reheapifyDown(int parentIndex);
 
-public:
     int getParent(int childIndex);
     int getLeftChild(int parentIndex);       // return the index of the left child
     int getRightChild(int parentIndex);      // return the index of the right child
     int getMaxChild(int parentIndex);        // return index of the max child
+
+    const std::vector<T> &getVector() const;
+
+    void sort();
+
+    void operator += (const T& item);
 };
 
 #include "Heap.cpp"
