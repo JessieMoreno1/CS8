@@ -1,0 +1,11 @@
+# ninja log v5
+2	742	1681871035240343786	CMakeFiles/dinosaurGame.dir/states.cpp.o	15130d360808f47e
+6	317	1681873111228243537	CMakeFiles/dinosaurGame.dir/Animation.cpp.o	8e5525e94ba05e34
+5	1037	1681896587012603698	CMakeFiles/dinosaurGame.dir/main.cpp.o	2e9750aa9de30a9d
+20	674	1681923681276220232	CMakeFiles/dinosaurGame.dir/Game.cpp.o	b37dc8f5a2d0f06b
+8	601	1681895834530074042	CMakeFiles/dinosaurGame.dir/StartScreen.cpp.o	e70164961f8ef228
+8	739	1681895150807414409	CMakeFiles/dinosaurGame.dir/Font.cpp.o	16d7a02459c710ab
+7	715	1681872815042845528	CMakeFiles/dinosaurGame.dir/Texture.cpp.o	3e167e6dd0864df1
+674	730	1681923681337583738	dinosaurGame	9c0bba6600ae18f
+7	147	1681892477696892891	CMakeFiles/dinosaurGame.dir/Ground.cpp.o	b087d0f2da0df789
+6	326	1681894664117041131	CMakeFiles/dinosaurGame.dir/Dinosaur.cpp.o	bc384db276480f83

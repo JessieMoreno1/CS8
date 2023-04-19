@@ -1,0 +1,22 @@
+//
+// Created by Jessie Mejia on 4/18/23.
+//
+
+#ifndef DINOSAURGAME_TEXTUREENUM_H
+#define DINOSAURGAME_TEXTUREENUM_H
+
+enum textureEnum{
+    DINO,
+    DINOCRAWL,
+    BIRD,
+    BIGCACTUS,
+    SMALLCACTUS,
+    ROCKS,
+    GAMEOVER,
+    RESTART,
+    CLOUDS,
+    GROUND,
+    LAST_TEXTURE
+};
+
+#endif //DINOSAURGAME_TEXTUREENUM_H

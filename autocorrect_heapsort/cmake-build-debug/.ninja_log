@@ -1,0 +1,25 @@
+# ninja log v5
+3	372	1679595373265461721	CMakeFiles/autocorrect_heapsort.dir/FileReader.cpp.o	2f81d21f2995ffc5
+0	213	1681367688113723400	build.ninja	7152c0db8959df54
+5	625	1679609202683467757	CMakeFiles/autocorrect_heapsort.dir/Textbox.cpp.o	4e1f601cc56c4b45
+4	440	1679596197823428494	CMakeFiles/autocorrect_heapsort.dir/Typing.cpp.o	4bd2444a6731f99f
+5	501	1679593033313589733	CMakeFiles/autocorrect_heapsort.dir/Button.cpp.o	a4f0737e924a5e0b
+530	888	1679593033700506132	CMakeFiles/autocorrect_heapsort.dir/Letter.cpp.o	bdef9e29b55b7218
+3	640	1680540397788363362	CMakeFiles/autocorrect_heapsort.dir/main.cpp.o	6930204f797b23c4
+3	640	1680540397789627514	CMakeFiles/autocorrect_heapsort.dir/TypingInput.cpp.o	892699296d64f5e3
+539	920	1679593033733974854	CMakeFiles/autocorrect_heapsort.dir/States.cpp.o	8730488928a1e820
+3	641	1680540397789027268	CMakeFiles/autocorrect_heapsort.dir/Application.cpp.o	ebcc598bff161b6b
+4	303	1679596585032535442	CMakeFiles/autocorrect_heapsort.dir/ImageRotation.cpp.o	6bfa95dd06baa2e3
+4	539	1679593033351862504	CMakeFiles/autocorrect_heapsort.dir/Font.cpp.o	5c253c688901177
+521	847	1679593033658566242	CMakeFiles/autocorrect_heapsort.dir/MouseEvents.cpp.o	14cfd1943530c240
+4	495	1679593033307706377	CMakeFiles/autocorrect_heapsort.dir/Cursor.cpp.o	bae7bdc29b4ba8c0
+495	846	1679593033659453679	CMakeFiles/autocorrect_heapsort.dir/Helper.cpp.o	af7f461a7a141d28
+368	429	1680540406165617294	autocorrect_heapsort	8bc5f5b4474c001a
+3	368	1680540406104075897	CMakeFiles/autocorrect_heapsort.dir/WordSuggestion.cpp.o	e576323f2c2d4bc4
+4	843	1680197218595355910	CMakeFiles/autocorrect_heapsort.dir/Word.cpp.o	7426ddcaeebb0eea
+4	701	1681368096028303094	CMakeFiles/autocorrect_heapsort.dir/FileReader.cpp.o	2f81d21f2995ffc5
+5	538	1681368106786711777	CMakeFiles/autocorrect_heapsort.dir/FileReader.cpp.o	2f81d21f2995ffc5
+4	702	1681369387700536497	CMakeFiles/autocorrect_heapsort.dir/FileReader.cpp.o	2f81d21f2995ffc5
+4	1044	1681369591773249353	CMakeFiles/autocorrect_heapsort.dir/Word.cpp.o	7426ddcaeebb0eea
+4	1081	1681369591809445334	CMakeFiles/autocorrect_heapsort.dir/FileReader.cpp.o	2f81d21f2995ffc5
+6	824	1681371259630516112	CMakeFiles/autocorrect_heapsort.dir/Suggester.cpp.o	c3508e7775bee710
