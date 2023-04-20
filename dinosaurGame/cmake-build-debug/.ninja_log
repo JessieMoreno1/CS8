@@ -9,3 +9,13 @@
 674	730	1681923681337583738	dinosaurGame	9c0bba6600ae18f
 7	147	1681892477696892891	CMakeFiles/dinosaurGame.dir/Ground.cpp.o	b087d0f2da0df789
 6	326	1681894664117041131	CMakeFiles/dinosaurGame.dir/Dinosaur.cpp.o	bc384db276480f83
+17	177	1681940477481717817	CMakeFiles/dinosaurGame.dir/Ground.cpp.o	3bd92bed8cd871b0
+17	824	1681940478090513710	CMakeFiles/dinosaurGame.dir/Texture.cpp.o	d3534cdb61a6094a
+17	941	1681940478243988792	CMakeFiles/dinosaurGame.dir/Animation.cpp.o	d5f14255094d9fe0
+177	944	1681940478247247954	CMakeFiles/dinosaurGame.dir/Dinosaur.cpp.o	7dcda67a101e2f67
+17	978	1681940478281511252	CMakeFiles/dinosaurGame.dir/states.cpp.o	ec9271392c5d68e1
+17	1007	1681940478309822512	CMakeFiles/dinosaurGame.dir/Game.cpp.o	b1bb6c5a1b4238af
+15	1008	1681940478308332325	CMakeFiles/dinosaurGame.dir/main.cpp.o	d7f8828bad87ef99
+824	1216	1681940478520909224	CMakeFiles/dinosaurGame.dir/Font.cpp.o	f0e464d6f6deab30
+941	1323	1681940478626799533	CMakeFiles/dinosaurGame.dir/StartScreen.cpp.o	c869d119b7dbe7bc
+1324	1382	1681940478688538936	dinosaurGame	9c0bba6600ae18f
