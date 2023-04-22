@@ -1,15 +1,18 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "SongCreator.h"
+#include "MusicPlayer.h"
 
 int main() {
 
-    SongCreator songCreator;
-
-    sf::Texture albumCover;
-    albumCover.loadFromFile("AlbumImages/ThePerfectLuvTape.jpg");
-
-    songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - The Perfect Luv Tape (WAV)", "Lil Uzi Vert", albumCover);
+//    SongCreator songCreator;
+//
+//    sf::Texture albumCover;
+//
+//    if (!albumCover.loadFromFile("AlbumImages/tplt.png"))
+//        exit(0)
+//
+//    songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - The Perfect Luv Tape (WAV)", "Lil Uzi Vert", albumCover);
+    MusicPlayer player;
 
     sf::RenderWindow window({1920,1080,32}, "");
     sf::Event event;
@@ -22,8 +25,11 @@ int main() {
             {
                 window.close();
             }
+            player.eventHandler(window, event);
         }
+
         window.clear({139,55,55});
+        window.draw(player);
         window.display();
     }
     return 0;
