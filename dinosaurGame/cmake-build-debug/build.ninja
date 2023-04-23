@@ -116,6 +116,13 @@ build CMakeFiles/dinosaurGame.dir/Cactus.cpp.o: CXX_COMPILER__dinosaurGame_Debug
   OBJECT_DIR = CMakeFiles/dinosaurGame.dir
   OBJECT_FILE_DIR = CMakeFiles/dinosaurGame.dir
 
+build CMakeFiles/dinosaurGame.dir/GameOverScreen.cpp.o: CXX_COMPILER__dinosaurGame_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/dinosaurGame/GameOverScreen.cpp || cmake_object_order_depends_target_dinosaurGame
+  DEP_FILE = CMakeFiles/dinosaurGame.dir/GameOverScreen.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/dinosaurGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/dinosaurGame.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target dinosaurGame
@@ -124,7 +131,7 @@ build CMakeFiles/dinosaurGame.dir/Cactus.cpp.o: CXX_COMPILER__dinosaurGame_Debug
 #############################################
 # Link the executable dinosaurGame
 
-build dinosaurGame: CXX_EXECUTABLE_LINKER__dinosaurGame_Debug CMakeFiles/dinosaurGame.dir/main.cpp.o CMakeFiles/dinosaurGame.dir/Animation.cpp.o CMakeFiles/dinosaurGame.dir/states.cpp.o CMakeFiles/dinosaurGame.dir/Texture.cpp.o CMakeFiles/dinosaurGame.dir/Game.cpp.o CMakeFiles/dinosaurGame.dir/Ground.cpp.o CMakeFiles/dinosaurGame.dir/Dinosaur.cpp.o CMakeFiles/dinosaurGame.dir/StartScreen.cpp.o CMakeFiles/dinosaurGame.dir/Font.cpp.o CMakeFiles/dinosaurGame.dir/Cactus.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build dinosaurGame: CXX_EXECUTABLE_LINKER__dinosaurGame_Debug CMakeFiles/dinosaurGame.dir/main.cpp.o CMakeFiles/dinosaurGame.dir/Animation.cpp.o CMakeFiles/dinosaurGame.dir/states.cpp.o CMakeFiles/dinosaurGame.dir/Texture.cpp.o CMakeFiles/dinosaurGame.dir/Game.cpp.o CMakeFiles/dinosaurGame.dir/Ground.cpp.o CMakeFiles/dinosaurGame.dir/Dinosaur.cpp.o CMakeFiles/dinosaurGame.dir/StartScreen.cpp.o CMakeFiles/dinosaurGame.dir/Font.cpp.o CMakeFiles/dinosaurGame.dir/Cactus.cpp.o CMakeFiles/dinosaurGame.dir/GameOverScreen.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/dinosaurGame.dir

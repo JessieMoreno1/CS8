@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Game.h"
 #include "StartScreen.h"
+#include "GameOverScreen.h"
+
 int main() {
     sf::RenderWindow window({1080, 720, 32}, "Dinosaur Game");
 
@@ -9,6 +11,9 @@ int main() {
     // game is hidden at the beginning
     Game game;
     game.enableState(HIDDEN);
+
+    GameOverScreen gameOverScreen;
+    gameOverScreen.enableState(HIDDEN);
 
     while (window.isOpen())
     {
@@ -26,11 +31,18 @@ int main() {
                 startScreen.enableState(HIDDEN);
                 game.disableState(HIDDEN);
             }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+            {
+                startScreen.enableState(HIDDEN);
+                game.enableState(HIDDEN);
+                gameOverScreen.disableState(HIDDEN);
+            }
             // other event handlers here
         }
         game.addEventHandler(window, event);
         window.clear(sf::Color::White);
         window.draw(startScreen);
+        window.draw(gameOverScreen);
         window.draw(game);
         window.display();
     }

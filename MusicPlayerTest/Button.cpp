@@ -36,6 +36,10 @@ void Button::setSprite(std::string filename) {
     texture.loadFromFile(filename);
     sprite.setTexture(texture);
 
-    Helper::center(sprite, button);
+    Helper::center(button, sprite);
+}
+
+void Button::setFillColor(sf::Color color) {
+    button.setFillColor(color);
 }
 

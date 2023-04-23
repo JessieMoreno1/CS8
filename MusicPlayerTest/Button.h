@@ -20,7 +20,7 @@ public:
     void setSpriteColor(sf::Color color);
     sf::FloatRect getGlobalBounds() const;
     void setSprite(std::string filename);
-
+    void setFillColor(sf::Color color);
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };
