@@ -53,8 +53,13 @@ void SongCreator::draw(sf::RenderTarget &target, sf::RenderStates states) const 
 
 }
 
-std::string SongCreator::getSong() {
-    return songs.front().songFilepath;
+std::string SongCreator::getSongName() {
+    return songs.front().name;
 }
+
+std::string SongCreator::getArtistName() {
+    return songs.front().artist;
+}
+
 
 

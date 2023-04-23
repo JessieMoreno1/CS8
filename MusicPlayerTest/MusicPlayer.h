@@ -10,13 +10,15 @@
 #include "Button.h"
 #include "MouseEvents.h"
 #include <SFML/Audio.hpp>
+#include "MainSongBox.h"
 
 class MusicPlayer : public sf::Drawable  {
 private:
     sf::Texture albumCover;
     SongCreator songCreator;
-    Button playButton;
+    Button playButton, nextButton;
     sf::Music music;
+    MainSongBox mainbox;
 public:
     MusicPlayer();
 

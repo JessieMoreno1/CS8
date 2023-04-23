@@ -22,12 +22,14 @@ private:
         //sf::Text sfml_name, sfml_artist;
     };
 
-    std::vector<Song> songs;
+//    std::vector<Song> songs;
 public:
-
+    std::vector<Song> songs;
     void createSongs(const std::string& filepath, std::string artist, sf::Texture& albumCover);
     Song newSong(std::string songName, std::string songArtist, sf::Sprite albumCover, std::string songfilepath);
-    std::string getSong();
+    std::string getSongName();
+    std::string getArtistName();
+
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };

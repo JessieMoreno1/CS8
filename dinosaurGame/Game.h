@@ -11,19 +11,25 @@
 #include "states.h"
 #include "Dinosaur.h"
 #include "Font.h"
-class Game : public sf::Drawable {
+#include "Cactus.h"
+#include <unistd.h>     //for using the function sleep
+class Game : public sf::Drawable, public states {
 private:
     sf::Text HiScore, HiScoreNumber, Points;
     Dinosaur dinosaur;
+    Cactus cactus;
 
     // keeps track of the high score and current score
     int Currentpoints, HighScorePoints = 0;
 
-    std::string highScore;
+    std::string highScore, currentPoints;
+    int currentScore = 0;
+    int high = 0;
 
 public:
     Game();
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);
+    void update();
 
 
 protected:

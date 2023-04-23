@@ -21,11 +21,11 @@ void Dinosaur::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
         dinosaur.setupIntRect(Texture::getTexture(DINO).getSize(), 1, 6);
     }
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !isJumping)
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))// && !isJumping)
     {
         if (dinosaur.getPosition().y >= maxJumpHeight)
         {
-            isJumping = true;
+            //isJumping = true;
             //dinosaurVelocity = -10.0f;
             dinosaurVelocity = -10.0f;
         }
@@ -42,7 +42,7 @@ void Dinosaur::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
 
         // reset the dinosaurs velocity
         dinosaurVelocity = 0.0f;
-        isJumping = false;
+        //isJumping = false;
     }
     dinosaur.animate();
 

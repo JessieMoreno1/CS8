@@ -5,7 +5,10 @@ int main() {
     sf::RenderWindow window({1080, 720, 32}, "Dinosaur Game");
 
     StartScreen startScreen;
+
+    // game is hidden at the beginning
     Game game;
+    game.enableState(HIDDEN);
 
     while (window.isOpen())
     {
@@ -21,6 +24,7 @@ int main() {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
             {
                 startScreen.enableState(HIDDEN);
+                game.disableState(HIDDEN);
             }
             // other event handlers here
         }
