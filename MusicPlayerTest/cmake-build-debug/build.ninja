@@ -95,6 +95,13 @@ build CMakeFiles/MusicPlayerTest.dir/MainSongBox.cpp.o: CXX_COMPILER__MusicPlaye
   OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
   OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
 
+build CMakeFiles/MusicPlayerTest.dir/Helper.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/Helper.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/Helper.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MusicPlayerTest
@@ -103,7 +110,7 @@ build CMakeFiles/MusicPlayerTest.dir/MainSongBox.cpp.o: CXX_COMPILER__MusicPlaye
 #############################################
 # Link the executable MusicPlayerTest
 
-build MusicPlayerTest: CXX_EXECUTABLE_LINKER__MusicPlayerTest_Debug CMakeFiles/MusicPlayerTest.dir/main.cpp.o CMakeFiles/MusicPlayerTest.dir/SongCreator.cpp.o CMakeFiles/MusicPlayerTest.dir/MusicPlayer.cpp.o CMakeFiles/MusicPlayerTest.dir/Button.cpp.o CMakeFiles/MusicPlayerTest.dir/Texture.cpp.o CMakeFiles/MusicPlayerTest.dir/MouseEvents.cpp.o CMakeFiles/MusicPlayerTest.dir/MainSongBox.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build MusicPlayerTest: CXX_EXECUTABLE_LINKER__MusicPlayerTest_Debug CMakeFiles/MusicPlayerTest.dir/main.cpp.o CMakeFiles/MusicPlayerTest.dir/SongCreator.cpp.o CMakeFiles/MusicPlayerTest.dir/MusicPlayer.cpp.o CMakeFiles/MusicPlayerTest.dir/Button.cpp.o CMakeFiles/MusicPlayerTest.dir/Texture.cpp.o CMakeFiles/MusicPlayerTest.dir/MouseEvents.cpp.o CMakeFiles/MusicPlayerTest.dir/MainSongBox.cpp.o CMakeFiles/MusicPlayerTest.dir/Helper.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir

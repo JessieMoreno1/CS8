@@ -11,7 +11,7 @@ MainSongBox::MainSongBox() {
     currentSong.setFillColor({158,84,85,255});
 
     // set the text of song and artist for box
-    song.setString(SongCreator::getSongName());
+    //song.setString(SongCreator::getSongName());
 
 
 }

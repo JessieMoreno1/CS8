@@ -10,6 +10,8 @@ void Button::setRadius(int radius) {
 
 void Button::setPosition(sf::Vector2f position) {
     button.setPosition(position);
+    Helper::center(this->sprite, button);
+
 }
 
 void Button::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -21,12 +23,6 @@ Button::Button() {
     button.setFillColor(sf::Color::White);
 }
 
-void Button::setSprite(std::string texture) {
-    sf::Texture Texture;
-    Texture.loadFromFile(texture);
-    sprite.setTexture(Texture);
-}
-
 
 void Button::setSpriteColor(sf::Color color) {
     sprite.setColor(color);
@@ -35,3 +31,11 @@ void Button::setSpriteColor(sf::Color color) {
 sf::FloatRect Button::getGlobalBounds() const {
     return button.getGlobalBounds();
 }
+
+void Button::setSprite(std::string filename) {
+    texture.loadFromFile(filename);
+    sprite.setTexture(texture);
+
+    Helper::center(sprite, button);
+}
+

@@ -11,7 +11,6 @@ MusicPlayer::MusicPlayer() {
     playButton.setRadius(80);
     playButton.setPosition({1200,500});
     playButton.setSprite("SpriteImages/play.fill@2x.png");
-    playButton.setSpriteColor(sf::Color::Black);
 
     nextButton.setRadius(80);
     nextButton.setPosition({1700,500});

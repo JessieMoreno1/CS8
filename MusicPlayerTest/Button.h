@@ -6,18 +6,21 @@
 #define MUSICPLAYERTEST_BUTTON_H
 
 #include <SFML/Graphics.hpp>
+#include "Helper.h"
 
 class Button : public sf::Drawable {
 private:
     sf::CircleShape button;
     sf::Sprite sprite;
+    sf::Texture texture;
 public:
     Button();
     void setRadius(int radius);
     void setPosition(sf::Vector2f position);
-    void setSprite(std::string texture);
     void setSpriteColor(sf::Color color);
     sf::FloatRect getGlobalBounds() const;
+    void setSprite(std::string filename);
+
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };
