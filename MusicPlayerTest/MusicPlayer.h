@@ -11,18 +11,27 @@
 #include "MouseEvents.h"
 #include <SFML/Audio.hpp>
 #include "MainSongBox.h"
+#include "Font.h"
 
-class MusicPlayer : public sf::Drawable  {
+class MusicPlayer : public sf::Drawable {
 private:
     sf::Texture albumCover;
     SongCreator songCreator;
     Button playButton, nextButton;
     sf::Music music;
     MainSongBox mainbox;
+
+    sf::Text song, artist;
+    sf::Sprite art;
+
 public:
     MusicPlayer();
-
     void eventHandler(sf::RenderWindow& window, sf::Event event);
+
+    std::string getArtist();
+    std::string getSong();
+    sf::Sprite getArt();
+    std::string getAlbum();
 
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
