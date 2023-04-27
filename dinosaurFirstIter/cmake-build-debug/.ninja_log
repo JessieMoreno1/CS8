@@ -1,0 +1,13 @@
+# ninja log v5
+309	343	1682634487759714815	dinosaurFirstIter	b379b3d9a68e6248
+10	862	1682632839758020785	CMakeFiles/dinosaurFirstIter.dir/Birds.cpp.o	2d4927e92adf3680
+6	309	1682634487723686665	CMakeFiles/dinosaurFirstIter.dir/main.cpp.o	1f39fd4ae4860aa4
+10	870	1682632839766197851	CMakeFiles/dinosaurFirstIter.dir/Animation.cpp.o	9bd8803b76b55dda
+10	915	1682632839812452891	CMakeFiles/dinosaurFirstIter.dir/Texture.cpp.o	b1307de0e4fe651d
+8	421	1682632906816010721	CMakeFiles/dinosaurFirstIter.dir/Cactus.cpp.o	aee96dd2a60a554b
+9	768	1682637954652858159	CMakeFiles/dinosaurFirstIter.dir/Animation.cpp.o	bcd67f12d4632c12
+9	771	1682637954654315552	CMakeFiles/dinosaurFirstIter.dir/Cactus.cpp.o	5b20609451e100d3
+9	775	1682637954660157832	CMakeFiles/dinosaurFirstIter.dir/Birds.cpp.o	42df7abe5e1c2a52
+8	801	1682637954686061119	CMakeFiles/dinosaurFirstIter.dir/main.cpp.o	64aa80b893191730
+9	807	1682637954692811467	CMakeFiles/dinosaurFirstIter.dir/Texture.cpp.o	ff698c64ba3cced4
+807	863	1682637954751867715	dinosaurFirstIter	b379b3d9a68e6248

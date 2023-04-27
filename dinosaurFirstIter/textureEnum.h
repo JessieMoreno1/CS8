@@ -1,0 +1,24 @@
+//
+// Created by Jessie Mejia on 4/27/23.
+//
+
+#ifndef DINOSAURFIRSTITER_TEXTUREENUM_H
+#define DINOSAURFIRSTITER_TEXTUREENUM_H
+
+enum textureEnum{
+    DINO,
+    DINOCRAWL,
+    BIRD,
+    BIRDCORRECT,
+    MIXEDCACTUS,
+    BIGCACTUS,
+    SMALLCACTUS,
+    ROCKS,
+    GAMEOVER,
+    RESTART,
+    CLOUDS,
+    GROUND,
+    LAST_TEXTURE
+};
+
+#endif //DINOSAURFIRSTITER_TEXTUREENUM_H
