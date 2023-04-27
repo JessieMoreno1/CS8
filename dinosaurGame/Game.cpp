@@ -5,7 +5,8 @@
 #include "Game.h"
 
 Game::Game() {
-    dinosaur.setPosition({100,500});
+    dinosaur.setPosition({100,650});
+    cactus.setPosition({600, 625});
 
     HiScore.setFont(Font::getFont(LGGOTHIC));
     HiScore.setString("HI");
@@ -29,6 +30,7 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const {
         target.draw(HiScore);
         target.draw(Points);
         target.draw(cactus);
+        target.draw(ducking);
     }
 
 }
@@ -36,6 +38,9 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 void Game::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
     dinosaur.addEventHandler(window, event);
     update();
+
+    float deltaTime = clock.restart().asSeconds();
+    cactus.move(-100 * deltaTime, 0);
 //    while (window.isOpen())
 //    {
 //        update();
@@ -45,6 +50,7 @@ void Game::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
 }
 
 void Game::update() {
+
     currentScore += 1;
     Points.setString(std::to_string(currentScore));
 }

@@ -14,7 +14,7 @@ private:
     sf::Sprite gameoverText, restart;
 public:
     GameOverScreen();
-
+    void addEventHandler(sf::RenderWindow& window, sf::Event& event);
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };

@@ -8,6 +8,8 @@
 #include "Animation.h"
 #include "Texture.h"
 #include <SFML/Graphics.hpp>
+#include <stdlib.h>
+#include <iostream>
 
 class Cactus : public sf::Drawable {
 private:
@@ -15,6 +17,7 @@ private:
     sf::Sprite cactus;
 public:
     Cactus();
+    void setPosition(sf::Vector2f position);
     void update();
 
 protected:

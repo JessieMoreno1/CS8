@@ -13,12 +13,6 @@
 class Dinosaur : public sf::Sprite , public states {
 private:
     Animation dinosaur;
-
-    // chatgpt stuff for jump
-    float dinosaurVelocity = 0.0f;
-    const float dinosaurGravity = 0.8f;
-   // bool isJumping = false;
-    const float maxJumpHeight = 400.f;
 public:
     Dinosaur();
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);

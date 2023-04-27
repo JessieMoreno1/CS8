@@ -23,3 +23,7 @@ void GameOverScreen::draw(sf::RenderTarget &target, sf::RenderStates states) con
         target.draw(restart);
     }
 }
+
+void GameOverScreen::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
+
+}

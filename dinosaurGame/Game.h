@@ -12,12 +12,17 @@
 #include "Dinosaur.h"
 #include "Font.h"
 #include "Cactus.h"
+#include "duckingDino.h"
+
 #include <unistd.h>     //for using the function sleep
 class Game : public sf::Drawable, public states {
 private:
+    sf::Clock clock;
     sf::Text HiScore, HiScoreNumber, Points;
     Dinosaur dinosaur;
+    duckingDino ducking;
     Cactus cactus;
+
 
     // keeps track of the high score and current score
     int Currentpoints, HighScorePoints = 0;

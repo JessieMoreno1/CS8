@@ -26,6 +26,10 @@ MusicPlayer::MusicPlayer() {
     nextButton.setPosition({1700,500});
     nextButton.setFillColor({158,84,85,255});
 
+    playingSongInfo.setSize({650,300});
+    playingSongInfo.setPosition({100,155});
+    playingSongInfo.setFillColor({158,84,85,255});
+
     // --------------------------------------------------------------- //
 
     // setting up sf::Text stuff
@@ -51,14 +55,18 @@ MusicPlayer::MusicPlayer() {
 }
 
 void MusicPlayer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    target.draw(playingSongInfo);
     target.draw(songCreator);
-    target.draw(playButton);
-    target.draw(nextButton);
-    target.draw(mainbox);
+
+
 
     // stuff inside box
     target.draw(song);
     target.draw(artist);
+    target.draw(songCreator.songs.begin()->albumArt);
+
+    target.draw(playButton);
+    target.draw(nextButton);
     //target.draw(art);
 //    target.draw(album);
 
@@ -133,6 +141,8 @@ std::string MusicPlayer::getArtist() {
 std::string MusicPlayer::getSong() {
     return songCreator.songs.begin()->name;
 }
+
+
 
 
 //sf::Texture MusicPlayer::getArt() {
