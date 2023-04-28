@@ -1,0 +1,14 @@
+//
+// Created by Jessie Mejia on 4/27/23.
+//
+
+#ifndef DINOSAURFIRSTITER_STATESENUM_H
+#define DINOSAURFIRSTITER_STATESENUM_H
+
+
+enum statesEnum {
+    HIDDEN,
+    LAST_STATE
+};
+
+#endif //DINOSAURFIRSTITER_STATESENUM_H

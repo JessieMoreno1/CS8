@@ -17,6 +17,7 @@ public:
     Dinosaur();
     void addEventHandler(sf::RenderWindow& window, sf::Event& event);
     void setPosition(sf::Vector2f position);
+    void jump();
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };

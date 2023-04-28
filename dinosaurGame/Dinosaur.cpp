@@ -10,6 +10,12 @@ Dinosaur::Dinosaur() {
 
 void Dinosaur::addEventHandler(sf::RenderWindow &window, sf::Event &event) {
     dinosaur.animate();
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !isJumping)
+    {
+        isJumping = true;
+        jump()
+    }
 }
 
 void Dinosaur::draw(sf::RenderTarget &target, sf::RenderStates states) const {

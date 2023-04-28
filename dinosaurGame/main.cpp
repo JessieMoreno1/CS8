@@ -43,7 +43,7 @@ int main() {
                 gameOverScreen.disableState(HIDDEN);
             }
             // other event handlers here
-            float deltaTime = clock.restart().asSeconds();
+            //float deltaTime = clock.restart().asSeconds();
             //cactus.move(-100 * deltaTime, 0);
 
         }
