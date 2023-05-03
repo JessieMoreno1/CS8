@@ -8,9 +8,10 @@ MusicPlayer::MusicPlayer() {
 
     // adding music to player
 
+//    songCardList.setPosition({50, 50});
+
     albumCover.loadFromFile("AlbumImages/tplt.png");
     songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - The Perfect Luv Tape (WAV)", "Lil Uzi Vert", albumCover);
-
     albumCover.loadFromFile("AlbumImages/Lil_Uzi_Vert_Luv_Is_Rage_15_EP.png");
     songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - Luv Is Rage 15 EP WAV", "Lil Uzi Vert", albumCover);
 
@@ -18,17 +19,22 @@ MusicPlayer::MusicPlayer() {
     songCreator.createSongs("WAVMUSIC/Kodak Black - Institution WAV", "Kodak Black", albumCover);
 
     playButton.setRadius(80);
+    playButton.setFillColor({158,84,85,255});
     playButton.setPosition({1200,500});
     playButton.setSprite("SpriteImages/play.fill@2x.png");
-    playButton.setFillColor({158,84,85,255});
 
     nextButton.setRadius(80);
     nextButton.setPosition({1700,500});
     nextButton.setFillColor({158,84,85,255});
+    nextButton.setSprite("SpriteImages/arrow.forward@2x.png");
 
-    playingSongInfo.setSize({650,300});
-    playingSongInfo.setPosition({100,155});
-    playingSongInfo.setFillColor({158,84,85,255});
+//    playingSongInfo.setSize({650,300});
+//    playingSongInfo.setPosition({100,155});
+//    playingSongInfo.setFillColor({158,84,85,255});
+
+//    art.setTexture(getArt());
+//    art.setPosition({855,150});
+//    art.setScale(.70,.70);
 
     // --------------------------------------------------------------- //
 
@@ -51,28 +57,24 @@ MusicPlayer::MusicPlayer() {
     song.setFillColor(sf::Color::White);
     song.setPosition({120,200});
 
-//    art.setTexture(getArt());
-}
-
-void MusicPlayer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    target.draw(playingSongInfo);
-    target.draw(songCreator);
 
 
-
-    // stuff inside box
-    target.draw(song);
-    target.draw(artist);
-    target.draw(songCreator.songs.begin()->albumArt);
-
-    target.draw(playButton);
-    target.draw(nextButton);
-    //target.draw(art);
-//    target.draw(album);
+//    for (int i = 0; i < songCreator.songs.size(); i++)
+//    {
+//        menu.addItems(songCreator.songs.at(i).name);
+//    }
+    //Helper::center(menu, playingSongInfo);
 
 }
+
+
 
 void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
+    menubar.eventHandler(window, event);
+    menu.eventHandler(window, event);
+    search.eventHandler(window, event);
+
+
     if(MouseEvents::isClick(playButton, window))
     {
         std::cout << "Play button clicked"<<  std::endl;
@@ -89,28 +91,28 @@ void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
 
             artist.setString(getArtist());
             song.setString(getSong());
-            //getArt();
         }
         if (music.getStatus() == music.Paused)
         {
-            //std::cout << "play" << std::endl;
             std::cout << "Playing : " << songCreator.songs.begin()->name << " by " << songCreator.songs.begin()->artist << std::endl;
             music.play();
 
             artist.setString(getArtist());
             song.setString(getSong());
-            //getArt();
+
+            playButton.setSprite("MusicPlayerTest/SpriteImages/play.fill@2x.png");
         }
         else if (music.getStatus() == music.Playing)
         {
-//            std::cout << "pause" << std::endl;
             std::cout << "Paused : " << songCreator.songs.begin()->name << " by " << songCreator.songs.begin()->artist << std::endl;
             music.pause();
 
             artist.setString(getArtist());
             song.setString(getSong());
-            //getArt();
+
+            playButton.setSprite("MusicPlayerTest/SpriteImages/pause@2x.png");
         }
+
     }
 
     if (MouseEvents::isClick(nextButton, window))
@@ -128,9 +130,19 @@ void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
 
         artist.setString(getArtist());
         song.setString(getSong());
+        //art.setTexture(getArt());
     }
 
-
+    if (MouseEvents::isClick(search, window))
+    {
+        menubar.enableState(HIDDEN);
+        search.setPosition({1000,25});
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && menubar.checkState(HIDDEN))
+    {
+        menubar.disableState(HIDDEN);
+        search.setPosition({1400,25});
+    }
 }
 
 std::string MusicPlayer::getArtist() {
@@ -142,10 +154,20 @@ std::string MusicPlayer::getSong() {
     return songCreator.songs.begin()->name;
 }
 
+sf::Texture MusicPlayer::getArt() {
+    //return *art.getTexture();
+    return *songCreator.songs.begin()->albumSprite.getTexture();
+}
 
+void MusicPlayer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    target.draw(songCreator);
 
+    target.draw(playButton);
+    target.draw(nextButton);
 
-//sf::Texture MusicPlayer::getArt() {
-//    //return sf::Sprite();
-//    return songCreator.songs.begin()->a;
-//}
+    target.draw(menubar);
+
+    target.draw(songCardList);
+    //target.draw(songCard);
+    target.draw(search);
+}

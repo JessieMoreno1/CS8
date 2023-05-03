@@ -102,6 +102,97 @@ build CMakeFiles/MusicPlayerTest.dir/Font.cpp.o: CXX_COMPILER__MusicPlayerTest_D
   OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
   OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
 
+build CMakeFiles/MusicPlayerTest.dir/List.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/List.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/List.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/ListItem.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/ListItem.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/ListItem.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/Menu.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/Menu.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/Menu.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/MenuBar.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/MenuBar.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/MenuBar.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/Position.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/Position.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/Position.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/States.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/States.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/States.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/SongCardList.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/SongCardList.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/SongCardList.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/SongCard.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/SongCard.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/SongCard.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/searchButton.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/searchButton.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/searchButton.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/Typing.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/Typing.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/Typing.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/Cursor.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/Cursor.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/Cursor.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/Letter.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/Letter.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/Letter.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
+build CMakeFiles/MusicPlayerTest.dir/Textbox.cpp.o: CXX_COMPILER__MusicPlayerTest_Debug /Users/jessiemejia/Library/Mobile$ Documents/com~apple~CloudDocs/CS8/MusicPlayerTest/Textbox.cpp || cmake_object_order_depends_target_MusicPlayerTest
+  DEP_FILE = CMakeFiles/MusicPlayerTest.dir/Textbox.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/MusicPlayerTest.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MusicPlayerTest
@@ -110,7 +201,7 @@ build CMakeFiles/MusicPlayerTest.dir/Font.cpp.o: CXX_COMPILER__MusicPlayerTest_D
 #############################################
 # Link the executable MusicPlayerTest
 
-build MusicPlayerTest: CXX_EXECUTABLE_LINKER__MusicPlayerTest_Debug CMakeFiles/MusicPlayerTest.dir/main.cpp.o CMakeFiles/MusicPlayerTest.dir/SongCreator.cpp.o CMakeFiles/MusicPlayerTest.dir/MusicPlayer.cpp.o CMakeFiles/MusicPlayerTest.dir/Button.cpp.o CMakeFiles/MusicPlayerTest.dir/Texture.cpp.o CMakeFiles/MusicPlayerTest.dir/MouseEvents.cpp.o CMakeFiles/MusicPlayerTest.dir/Helper.cpp.o CMakeFiles/MusicPlayerTest.dir/Font.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
+build MusicPlayerTest: CXX_EXECUTABLE_LINKER__MusicPlayerTest_Debug CMakeFiles/MusicPlayerTest.dir/main.cpp.o CMakeFiles/MusicPlayerTest.dir/SongCreator.cpp.o CMakeFiles/MusicPlayerTest.dir/MusicPlayer.cpp.o CMakeFiles/MusicPlayerTest.dir/Button.cpp.o CMakeFiles/MusicPlayerTest.dir/Texture.cpp.o CMakeFiles/MusicPlayerTest.dir/MouseEvents.cpp.o CMakeFiles/MusicPlayerTest.dir/Helper.cpp.o CMakeFiles/MusicPlayerTest.dir/Font.cpp.o CMakeFiles/MusicPlayerTest.dir/List.cpp.o CMakeFiles/MusicPlayerTest.dir/ListItem.cpp.o CMakeFiles/MusicPlayerTest.dir/Menu.cpp.o CMakeFiles/MusicPlayerTest.dir/MenuBar.cpp.o CMakeFiles/MusicPlayerTest.dir/Position.cpp.o CMakeFiles/MusicPlayerTest.dir/States.cpp.o CMakeFiles/MusicPlayerTest.dir/SongCardList.cpp.o CMakeFiles/MusicPlayerTest.dir/SongCard.cpp.o CMakeFiles/MusicPlayerTest.dir/searchButton.cpp.o CMakeFiles/MusicPlayerTest.dir/Typing.cpp.o CMakeFiles/MusicPlayerTest.dir/Cursor.cpp.o CMakeFiles/MusicPlayerTest.dir/Letter.cpp.o CMakeFiles/MusicPlayerTest.dir/Textbox.cpp.o | /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib /opt/homebrew/lib/libsfml-audio.2.5.1.dylib /opt/homebrew/lib/libsfml-window.2.5.1.dylib /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib  /opt/homebrew/lib/libsfml-audio.2.5.1.dylib  /opt/homebrew/lib/libsfml-window.2.5.1.dylib  /opt/homebrew/lib/libsfml-system.2.5.1.dylib
   OBJECT_DIR = CMakeFiles/MusicPlayerTest.dir

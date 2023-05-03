@@ -16,8 +16,7 @@ private:
     {
         std::string name;
         std::string artist;
-        //sf::Texture albumArt;
-        sf::Sprite albumArt;
+        sf::Sprite albumSprite;
         std::string songFilepath;
         //sf::Text sfml_name, sfml_artist;
     };

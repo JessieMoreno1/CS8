@@ -17,10 +17,10 @@ public:
     Button();
     void setRadius(int radius);
     void setPosition(sf::Vector2f position);
-    void setSpriteColor(sf::Color color);
+    void setFillColor(sf::Color color);
     sf::FloatRect getGlobalBounds() const;
     void setSprite(std::string filename);
-    void setFillColor(sf::Color color);
+
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 };

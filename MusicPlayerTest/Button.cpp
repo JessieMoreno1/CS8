@@ -16,6 +16,7 @@ void Button::setPosition(sf::Vector2f position) {
 
 void Button::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(button);
+    target.draw(sprite);
 }
 
 Button::Button() {
@@ -24,9 +25,7 @@ Button::Button() {
 }
 
 
-void Button::setSpriteColor(sf::Color color) {
-    sprite.setColor(color);
-}
+
 
 sf::FloatRect Button::getGlobalBounds() const {
     return button.getGlobalBounds();
@@ -36,7 +35,7 @@ void Button::setSprite(std::string filename) {
     texture.loadFromFile(filename);
     sprite.setTexture(texture);
 
-    Helper::center(button, sprite);
+    Helper::center(sprite, button);
 }
 
 void Button::setFillColor(sf::Color color) {

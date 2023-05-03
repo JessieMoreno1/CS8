@@ -17,7 +17,7 @@
 class TypingInput : public sf::Drawable, public States, public sf::Transformable {
 private:
     Typing typing1;
-    WordSuggestion wordSuggestion;
+
     //Typing typing2;
 
     Cursor cursor1;

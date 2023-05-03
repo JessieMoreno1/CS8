@@ -37,13 +37,13 @@ SongCreator::Song SongCreator::newSong(std::string songName, std::string songArt
     Song s;
     s.name = songName;
     s.artist = songArtist;
-    s.albumArt = albumCover;
+    s.albumSprite = albumCover;
     s.songFilepath = songfilepath;
     return s;
 }
 
 void SongCreator::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    //target.draw(songs.begin()->albumArt);
+    //target.draw(songs.begin()->albumSprite);
 }
 
 
