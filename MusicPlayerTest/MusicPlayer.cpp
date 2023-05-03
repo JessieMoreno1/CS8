@@ -5,18 +5,28 @@
 #include "MusicPlayer.h"
 
 MusicPlayer::MusicPlayer() {
+    companyName.setString("Jessie UI");
+    companyName.setFont(Font::getFont(BEBAS));
+    companyName.setCharacterSize(30);
+    companyName.setFillColor(sf::Color::White);
+    companyName.setPosition({50,25});
+
+//    currentAlbumArt.setColor(sf::Color::Black);
+//    currentAlbumArt.setScale(.7f,.7f);
+//    currentAlbumArt.setPosition({850,150});
 
     // adding music to player
+    songCreator.createSongs("WAVMUSIC/Frank Ocean - Endless WAV", "Frank Ocean", Textures::getTexture(ENDLESS));
 
-//    songCardList.setPosition({50, 50});
+    songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - The Perfect Luv Tape (WAV)", "Lil Uzi Vert", Textures::getTexture(TPLT));
 
-    albumCover.loadFromFile("AlbumImages/tplt.png");
-    songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - The Perfect Luv Tape (WAV)", "Lil Uzi Vert", albumCover);
-    albumCover.loadFromFile("AlbumImages/Lil_Uzi_Vert_Luv_Is_Rage_15_EP.png");
-    songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - Luv Is Rage 15 EP WAV", "Lil Uzi Vert", albumCover);
+    songCreator.createSongs("WAVMUSIC/Lil Uzi Vert - Luv Is Rage 15 EP WAV", "Lil Uzi Vert",  Textures::getTexture(LILUZIVERT_LUVISRAGE));
 
-    albumCover.loadFromFile("AlbumImages/00 - Kodak_Black_Institution-front-large.png");
-    songCreator.createSongs("WAVMUSIC/Kodak Black - Institution WAV", "Kodak Black", albumCover);
+
+    //songCreator.createSongs("WAVMUSIC/Kodak Black - Institution WAV", "Kodak Black", Textures::getTexture(KODAKBLACK_INSTITUTION));
+
+
+
 
     playButton.setRadius(80);
     playButton.setFillColor({158,84,85,255});
@@ -28,22 +38,6 @@ MusicPlayer::MusicPlayer() {
     nextButton.setFillColor({158,84,85,255});
     nextButton.setSprite("SpriteImages/arrow.forward@2x.png");
 
-//    playingSongInfo.setSize({650,300});
-//    playingSongInfo.setPosition({100,155});
-//    playingSongInfo.setFillColor({158,84,85,255});
-
-//    art.setTexture(getArt());
-//    art.setPosition({855,150});
-//    art.setScale(.70,.70);
-
-    // --------------------------------------------------------------- //
-
-    // setting up sf::Text stuff
-//    album.setString("No Album");
-//    album.setFont(Font::getFont(BEBAS));
-//    album.setCharacterSize(30);
-//    album.setFillColor(sf::Color::White);
-//    album.setPosition({120,350});
 
     artist.setString("No Artist");
     artist.setFont(Font::getFont(BEBAS));
@@ -57,19 +51,21 @@ MusicPlayer::MusicPlayer() {
     song.setFillColor(sf::Color::White);
     song.setPosition({120,200});
 
+    box.setPosition({100, 150});
+    box.setFillColor({158,84,85,255});
+    box.setSize({600,300});
 
+    love.setTexture(Textures::getTexture(HEART));
+    love.setPosition({550, 380});
 
-//    for (int i = 0; i < songCreator.songs.size(); i++)
-//    {
-//        menu.addItems(songCreator.songs.at(i).name);
-//    }
-    //Helper::center(menu, playingSongInfo);
-
+    smallPlayPause.setTexture(Textures::getTexture(PLAYCIRCLE));
+    smallPlayPause.setPosition({620, 380});
 }
 
 
 
 void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
+
     menubar.eventHandler(window, event);
     menu.eventHandler(window, event);
     search.eventHandler(window, event);
@@ -91,6 +87,8 @@ void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
 
             artist.setString(getArtist());
             song.setString(getSong());
+//            currentAlbumArt.setColor(sf::Color::Transparent);
+//            currentAlbumArt.setTexture(getArt());
         }
         if (music.getStatus() == music.Paused)
         {
@@ -100,7 +98,8 @@ void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
             artist.setString(getArtist());
             song.setString(getSong());
 
-            playButton.setSprite("MusicPlayerTest/SpriteImages/play.fill@2x.png");
+            playButton.setSprite("SpriteImages/pause.fill@2x.png");
+            smallPlayPause.setTexture(Textures::getTexture(PAUSECIRCLE));
         }
         else if (music.getStatus() == music.Playing)
         {
@@ -110,7 +109,9 @@ void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
             artist.setString(getArtist());
             song.setString(getSong());
 
-            playButton.setSprite("MusicPlayerTest/SpriteImages/pause@2x.png");
+            playButton.setSprite("SpriteImages/play.fill@2x.png");
+            smallPlayPause.setTexture(Textures::getTexture(PLAYCIRCLE));
+
         }
 
     }
@@ -130,7 +131,8 @@ void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
 
         artist.setString(getArtist());
         song.setString(getSong());
-        //art.setTexture(getArt());
+//        currentAlbumArt.setTexture(getArt());
+        playButton.setSprite("SpriteImages/pause.fill@2x.png");
     }
 
     if (MouseEvents::isClick(search, window))
@@ -143,6 +145,23 @@ void MusicPlayer::eventHandler(sf::RenderWindow &window, sf::Event event) {
         menubar.disableState(HIDDEN);
         search.setPosition({1400,25});
     }
+
+    if (MouseEvents::isClick(love, window))
+    {
+        love.setTexture(Textures::getTexture(HEART_FILL));
+    }
+
+    if (MouseEvents::isClick(smallPlayPause, window))
+    {
+        if (music.getStatus() == music.Playing)
+        {
+            smallPlayPause.setTexture(Textures::getTexture(PAUSECIRCLE));
+        }
+        if (music.getStatus() == music.Paused)
+        {
+            smallPlayPause.setTexture(Textures::getTexture(PAUSECIRCLE));
+        }
+    }
 }
 
 std::string MusicPlayer::getArtist() {
@@ -150,24 +169,41 @@ std::string MusicPlayer::getArtist() {
 }
 
 
+
 std::string MusicPlayer::getSong() {
+
+    if (songCreator.songs.begin()->name.size() > 25)
+    {
+        song.setCharacterSize(30);
+    }
+    else
+    {
+        song.setCharacterSize(80);
+    }
+
     return songCreator.songs.begin()->name;
 }
 
-sf::Texture MusicPlayer::getArt() {
-    //return *art.getTexture();
-    return *songCreator.songs.begin()->albumSprite.getTexture();
-}
-
 void MusicPlayer::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    target.draw(companyName);
+
     target.draw(songCreator);
 
+    if(currentAlbumArt)
+        target.draw(*currentAlbumArt);
     target.draw(playButton);
     target.draw(nextButton);
 
+    target.draw(box);
+    target.draw(song);
+    target.draw(artist);
+    target.draw(love);
+    target.draw(smallPlayPause);
+
     target.draw(menubar);
 
-    target.draw(songCardList);
     //target.draw(songCard);
     target.draw(search);
 }
+
+

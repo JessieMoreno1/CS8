@@ -13,30 +13,45 @@
 #include "Font.h"
 #include "MenuBar.h"
 #include "Menu.h"
-#include "SongCard.h"
-#include "SongCardList.h"
+
 #include "searchButton.h"
 #include "Textbox.h"
+#include "Textures.h"
 
 class MusicPlayer : public sf::Drawable {
 private:
+    sf::Text companyName;
 
+    // album art
+    sf::Sprite* currentAlbumArt = nullptr;
+
+    // search and search textbox
     searchButton search;
     Textbox textbox;
 
-    sf::Texture albumCover;
+    // creates the songs
     SongCreator songCreator;
+
+    // buttons for music
     Button playButton, nextButton;
+
+    // allows the use of music
     sf::Music music;
 
-    //SongCard songCard;
-    SongCardList songCardList;
-
+    // displaying current song info
+    sf::RectangleShape box;
     sf::Text song, artist;
-    sf::Sprite art;
 
+    // needed for menu bar
     MenuBar menubar;
     Menu menu;
+
+    // love icon
+    sf::Sprite love;
+
+    // play pause next to love
+    sf::Sprite smallPlayPause;
+
 
 public:
     MusicPlayer();
@@ -44,7 +59,6 @@ public:
 
     std::string getArtist();
     std::string getSong();
-    sf::Texture getArt();
 
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;

@@ -7,6 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Helper.h"
+#include "TextureEnums.h"
 
 class Button : public sf::Drawable {
 private:

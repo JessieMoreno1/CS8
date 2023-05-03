@@ -17,16 +17,16 @@ private:
         std::string name;
         std::string artist;
         sf::Sprite albumSprite;
+        sf::Texture albumTexture;
         std::string songFilepath;
         //sf::Text sfml_name, sfml_artist;
     };
-
+    sf::Sprite albumArt;
 //    std::vector<Song> songs;
 public:
     std::vector<Song> songs;
     void createSongs(const std::string& filepath, std::string artist, sf::Texture& albumCover);
-    Song newSong(std::string songName, std::string songArtist, sf::Sprite albumCover, std::string songfilepath);
-
+//    Song newSong(std::string songName, std::string songArtist, sf::Sprite& albumCover, sf::Texture& Texture, std::string songfilepath);
 
 protected:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;

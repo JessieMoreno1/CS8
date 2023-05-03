@@ -5,10 +5,11 @@
 #include "MenuBar.h"
 
 MenuBar::MenuBar() {
-    m1 = {"soundtracks", "Menu 1 item 2", "Menu 1 item 3", "Menu 1 item 4", "Menu 1 item 5"};
-    m2 = {"composers", "Menu 2 item 2", "Menu 2 item 3", "Menu 2 item 4", "Menu 2 item 5"};
+    m1 = {"soundtracks", "artists", "albums", "playlists"};
+    m2 = {"liked songs", "liked artists", "liked albums"};
+    //m2 = {"genres", "Menu 2 item 2"};
 
-    m4 = {"profile", "Menu 3 item 2", "Menu 3 item 3", "Menu 3 item 4", "Menu 3 item 5"};
+    m4 = {"profile", "settings", "logout"};
 
     m1.setPosition({1000,25});
     m2.setPosition({1200,25});
